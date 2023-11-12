@@ -11,8 +11,8 @@ Just click on the node icon to instantiate it in the current scene.
 ![Image](quick-toolbar.png "Quick Toolbar")
 
 ## PARA SUBIR A GITHUB
-ir a la carpeta de res://
-click derecho en espacio vacio y abrir el git bash
+Ir a la carpeta de res://
+Click derecho en espacio vacio y abrir el git bash
 git status
 git add .
 git commit -m "Mensaje"
