@@ -1,0 +1,27 @@
+[remap]
+
+importer="3d_texture"
+type="CompressedTexture3D"
+uid="uid://wjuvw4uw4kig"
+path.s3tc="res://.godot/imported/prueba superrandom.png-374eddf1d701242233104cdd3a046961.s3tc.ctex3d"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://prueba superrandom.png"
+dest_files=["res://.godot/imported/prueba superrandom.png-374eddf1d701242233104cdd3a046961.s3tc.ctex3d"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+slices/horizontal=8
+slices/vertical=8
