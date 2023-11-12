@@ -15,7 +15,7 @@ center_offset = Vector3(1, 0, 0)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_4cw26"]
 flip_faces = true
-size = Vector2(7, 5)
+size = Vector2(17, 15)
 center_offset = Vector3(1, -0.01, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8452y"]
