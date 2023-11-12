@@ -100,7 +100,7 @@ albedo_texture = ExtResource("1_y14rk")
 [node name="HABITACIÓN 313" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("3_he547")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.66605, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.56615, 0)
 
 [node name="SUELO TOTAL" type="MeshInstance3D" parent="."]
 material_override = SubResource("StandardMaterial3D_usb64")
@@ -182,3 +182,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.51031, 5, 1.71728)
 material_override = SubResource("StandardMaterial3D_k0pw3")
 use_collision = true
 size = Vector3(0.12, 10, 2.56)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0.543551)
