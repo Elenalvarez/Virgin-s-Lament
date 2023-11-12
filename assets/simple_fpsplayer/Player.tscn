@@ -4,6 +4,8 @@
 [ext_resource type="Script" path="res://assets/simple_fpsplayer/ability_grab.gd" id="2_gwqkd"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_euj4i"]
+radius = 0.2
+height = 1.7
 
 [node name="Player" type="CharacterBody3D"]
 disable_mode = 2

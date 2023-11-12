@@ -102,10 +102,6 @@ albedo_texture = ExtResource("1_y14rk")
 [node name="Player" parent="." instance=ExtResource("3_he547")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.66605, 0)
 
-[node name="SOLECITO" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866024, -0.500003, -1.2368e-06, 0, -2.47359e-06, 1, -0.500003, 0.866024, 2.14219e-06, 0.647763, 7.30589, -0.922889)
-shadow_enabled = true
-
 [node name="SUELO TOTAL" type="MeshInstance3D" parent="."]
 material_override = SubResource("StandardMaterial3D_usb64")
 mesh = SubResource("PlaneMesh_g2cqf")
