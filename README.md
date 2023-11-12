@@ -13,6 +13,7 @@ Just click on the node icon to instantiate it in the current scene.
 ## PARA SUBIR A GITHUB
 Ir a la carpeta de res://
 Click derecho en espacio vacio y abrir el git bash
+
 git status
 git add .
 git commit -m "Mensaje"
