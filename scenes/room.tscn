@@ -1,17 +1,17 @@
 [gd_scene load_steps=53 format=3 uid="uid://dr55lyshw5sxf"]
 
-[ext_resource type="Texture2D" uid="uid://ctxe3ch88jtpo" path="res://assets/textures/TEXTURAS FOTOREALISTAS/double_brick_floor_diff_4k.png" id="1_y14rk"]
-[ext_resource type="Texture2D" uid="uid://nxfjrmnbay4t" path="res://assets/textures/dev/grids/texture_07.png" id="2_r33uf"]
-[ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="3_he547"]
-[ext_resource type="Texture2D" uid="uid://bwv0b5qf6fn4g" path="res://assets/textures/dev/wood_cabinet_worn_long_4k/textures/wood_cabinet_worn_long_diff_4k.png" id="4_65ao7"]
-[ext_resource type="Texture2D" uid="uid://d0avudksj6cu8" path="res://assets/textures/CHEMINY.png" id="4_erect"]
-[ext_resource type="Texture2D" uid="uid://cesi63208bur2" path="res://assets/textures/dev/grids/WhatsApp Image 2023-11-11 at 10.00.26.png" id="5_vmiok"]
-[ext_resource type="Texture2D" uid="uid://cwilq58vf5nep" path="res://assets/textures/dev/celolsia pa muro.png" id="6_q57of"]
-[ext_resource type="Texture2D" uid="uid://n6nf4pbdh62y" path="res://assets/textures/dev/cross-209668.png" id="7_8tqil"]
-[ext_resource type="Texture2D" uid="uid://djs3vc0h3ey1v" path="res://assets/textures/dev/NormalMapcross.png" id="8_n3awp"]
+[ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_bca5t"]
+[ext_resource type="Texture2D" uid="uid://ctxe3ch88jtpo" path="res://assets/textures/TEXTURAS FOTOREALISTAS/double_brick_floor_diff_4k.png" id="2_7ufki"]
+[ext_resource type="Texture2D" uid="uid://nxfjrmnbay4t" path="res://assets/textures/dev/grids/texture_07.png" id="3_kb1x8"]
+[ext_resource type="Texture2D" uid="uid://bwv0b5qf6fn4g" path="res://assets/textures/dev/wood_cabinet_worn_long_4k/textures/wood_cabinet_worn_long_diff_4k.png" id="4_p3ocd"]
+[ext_resource type="Texture2D" uid="uid://d0avudksj6cu8" path="res://assets/textures/CHEMINY.png" id="5_u7cnr"]
+[ext_resource type="Texture2D" uid="uid://cesi63208bur2" path="res://assets/textures/dev/grids/WhatsApp Image 2023-11-11 at 10.00.26.png" id="6_ixx4x"]
+[ext_resource type="Texture2D" uid="uid://cwilq58vf5nep" path="res://assets/textures/dev/celolsia pa muro.png" id="7_x8gli"]
+[ext_resource type="Texture2D" uid="uid://n6nf4pbdh62y" path="res://assets/textures/dev/cross-209668.png" id="8_hrjry"]
+[ext_resource type="Texture2D" uid="uid://djs3vc0h3ey1v" path="res://assets/textures/dev/NormalMapcross.png" id="9_i4txv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_usb64"]
-albedo_texture = ExtResource("1_y14rk")
+albedo_texture = ExtResource("2_7ufki")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_g2cqf"]
 size = Vector2(7, 7)
@@ -25,7 +25,7 @@ size = Vector2(17, 15)
 center_offset = Vector3(1, -0.01, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8452y"]
-albedo_texture = ExtResource("1_y14rk")
+albedo_texture = ExtResource("2_7ufki")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_r8u4j"]
 flip_faces = true
@@ -33,21 +33,21 @@ size = Vector2(3, 0.5)
 center_offset = Vector3(0.65, 0, -2.75)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jfa34"]
-albedo_texture = ExtResource("2_r33uf")
+albedo_texture = ExtResource("3_kb1x8")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_1q3l3"]
 size = Vector2(3.5, 20)
 center_offset = Vector3(0, -4.5, 5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xmper"]
-albedo_texture = ExtResource("2_r33uf")
+albedo_texture = ExtResource("3_kb1x8")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_g8701"]
 size = Vector2(7, 20)
 center_offset = Vector3(0, -2.5, 10)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gkrak"]
-albedo_texture = ExtResource("2_r33uf")
+albedo_texture = ExtResource("3_kb1x8")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8jv1l"]
 size = Vector2(2, 3)
@@ -60,17 +60,17 @@ resource_local_to_scene = true
 next_pass = SubResource("PlaceholderMaterial_1i7g0")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sdjr5"]
-albedo_texture = ExtResource("2_r33uf")
+albedo_texture = ExtResource("3_kb1x8")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_p73y8"]
 size = Vector2(0.707, 3)
 center_offset = Vector3(0, 0, 1.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vq6cw"]
-albedo_texture = ExtResource("2_r33uf")
+albedo_texture = ExtResource("3_kb1x8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ffhfu"]
-albedo_texture = ExtResource("2_r33uf")
+albedo_texture = ExtResource("3_kb1x8")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_6enl6"]
 flip_faces = true
@@ -80,36 +80,36 @@ center_offset = Vector3(1, 20, 0)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bd0xm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_odl1u"]
-albedo_texture = ExtResource("2_r33uf")
+albedo_texture = ExtResource("3_kb1x8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2rq7a"]
-albedo_texture = ExtResource("1_y14rk")
+albedo_texture = ExtResource("2_7ufki")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jggxa"]
-albedo_texture = ExtResource("4_65ao7")
+albedo_texture = ExtResource("4_p3ocd")
 uv1_scale = Vector3(6, 6, 6)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k0pw3"]
-albedo_texture = ExtResource("1_y14rk")
+albedo_texture = ExtResource("2_7ufki")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8tic6"]
-albedo_texture = ExtResource("2_r33uf")
+albedo_texture = ExtResource("3_kb1x8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vsvv6"]
-albedo_texture = ExtResource("2_r33uf")
+albedo_texture = ExtResource("3_kb1x8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ck5dn"]
-albedo_texture = ExtResource("2_r33uf")
+albedo_texture = ExtResource("3_kb1x8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dkpvr"]
-albedo_texture = ExtResource("2_r33uf")
+albedo_texture = ExtResource("3_kb1x8")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_a4s1k"]
 size = Vector2(1.4, 1.083)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ivftk"]
 transparency = 1
-albedo_texture = ExtResource("4_erect")
+albedo_texture = ExtResource("5_u7cnr")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_isr4t"]
 size = Vector2(0.5, 0.5)
@@ -118,7 +118,7 @@ size = Vector2(0.5, 0.5)
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-albedo_texture = ExtResource("5_vmiok")
+albedo_texture = ExtResource("6_ixx4x")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_wrnw0"]
 size = Vector2(0.305, 1.524)
@@ -142,7 +142,7 @@ transparency = 2
 alpha_scissor_threshold = 0.118
 alpha_antialiasing_mode = 0
 diffuse_mode = 3
-albedo_texture = ExtResource("6_q57of")
+albedo_texture = ExtResource("7_x8gli")
 albedo_texture_force_srgb = true
 backlight_enabled = true
 backlight = Color(0.301961, 0.301961, 0.301961, 1)
@@ -157,9 +157,9 @@ size = Vector2(2, 3)
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-albedo_texture = ExtResource("7_8tqil")
+albedo_texture = ExtResource("8_hrjry")
 normal_enabled = true
-normal_texture = ExtResource("8_n3awp")
+normal_texture = ExtResource("9_i4txv")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_1hsuj"]
 size = Vector2(0.08, 0.4)
@@ -172,7 +172,7 @@ size = Vector2(0.9, 0.72)
 
 [node name="HABITACIÓN 313" type="Node3D"]
 
-[node name="Player" parent="." instance=ExtResource("3_he547")]
+[node name="Player" parent="." instance=ExtResource("1_bca5t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.56615, 0)
 
 [node name="SUELO TOTAL" type="MeshInstance3D" parent="."]
