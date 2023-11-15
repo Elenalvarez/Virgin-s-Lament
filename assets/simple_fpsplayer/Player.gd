@@ -48,6 +48,7 @@ func _input(event):
 				flashlight.hide()
 			elif not event.echo:
 				flashlight.show()
+				
 
 func _physics_process(delta):
 	var moving = false
