@@ -1,0 +1,127 @@
+[gd_scene load_steps=6 format=3 uid="uid://bo7ndpca54jai"]
+
+[ext_resource type="Script" path="res://scripts/options_menu.gd" id="1_yic7e"]
+[ext_resource type="FontFile" uid="uid://bq6gtmqupxaxq" path="res://assets/fonts/Cinzel-VariableFont_wght.ttf" id="2_7cavv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s7msf"]
+bg_color = Color(0.184314, 0.184314, 0.184314, 0.392157)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mbmb6"]
+bg_color = Color(0.0470588, 0.0470588, 0.0470588, 0.784314)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_71g83"]
+bg_color = Color(0.0923971, 0.0923971, 0.0923971, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yic7e")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -13.0
+offset_top = -20.0
+offset_right = 1170.0
+offset_bottom = 671.0
+color = Color(0.117647, 0.117647, 0.117647, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 472.0
+offset_top = 52.0
+offset_right = 686.0
+offset_bottom = 123.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_7cavv")
+theme_override_font_sizes/font_size = 50
+text = "Options"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -155.0
+offset_top = -22.0
+offset_right = 201.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Labels" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="HBoxContainer/Labels"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_7cavv")
+theme_override_font_sizes/font_size = 30
+text = "Volumen  "
+
+[node name="Label3" type="Label" parent="HBoxContainer/Labels"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_7cavv")
+theme_override_font_sizes/font_size = 30
+text = "sensitivity  "
+
+[node name="Buttons" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Volumen" type="HSlider" parent="HBoxContainer/Buttons"]
+layout_mode = 2
+size_flags_vertical = 6
+value = 100.0
+
+[node name="Sensitivity" type="HSlider" parent="HBoxContainer/Buttons"]
+layout_mode = 2
+size_flags_vertical = 6
+min_value = 0.05
+max_value = 3.0
+step = 0.1
+value = 1.05
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 541.0
+offset_top = 509.0
+offset_right = 617.0
+offset_bottom = 551.0
+size_flags_horizontal = 4
+size_flags_vertical = 10
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_7cavv")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_s7msf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mbmb6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_71g83")
+text = "Back"
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="value_changed" from="HBoxContainer/Buttons/Volumen" to="." method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="HBoxContainer/Buttons/Sensitivity" to="." method="_on_sensitivity_value_changed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
