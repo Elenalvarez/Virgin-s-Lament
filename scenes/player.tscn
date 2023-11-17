@@ -1,118 +1,37 @@
-[gd_scene load_steps=9 format=3 uid="uid://kicjwmh02uwf"]
+[gd_scene load_steps=4 format=3 uid="uid://qp83kfxevoyc"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_wkneb"]
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1_rpknh"]
+[ext_resource type="Script" path="res://scripts/ability_grab.gd" id="2_kqr6n"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_26tbo"]
-height = 1.6
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fgxde"]
-radius = 0.4
-height = 0.8
-
-[sub_resource type="Animation" id="Animation_et2q2"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_0yaf5"]
-resource_name = "jump"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.3),
-"transitions": PackedFloat32Array(1, 1.62451, 0.435276),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(-0.0523599, 0, -0.0349066), Vector3(0, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_eqtd2"]
-resource_name = "landing"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.3),
-"transitions": PackedFloat32Array(1, 1.62451, 0.435276),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0.0523599, 0, -0.0349066), Vector3(0, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_s7f04"]
-resource_name = "roll"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8, 1),
-"transitions": PackedFloat32Array(1, 0.5, 1, 2),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(-3.14159, 0, 0), Vector3(-6.45772, 0, 0), Vector3(-6.28319, 0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_8twm5"]
-_data = {
-"RESET": SubResource("Animation_et2q2"),
-"jump": SubResource("Animation_0yaf5"),
-"landing": SubResource("Animation_eqtd2"),
-"roll": SubResource("Animation_s7f04")
-}
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_euj4i"]
+radius = 0.2
+height = 1.7
 
 [node name="Player" type="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
-script = ExtResource("1_wkneb")
+disable_mode = 2
+floor_max_angle = 0.802851
+script = ExtResource("1_rpknh")
 
-[node name="StandingCollisionShape" type="CollisionShape3D" parent="."]
-shape = SubResource("CapsuleShape3D_26tbo")
+[node name="body" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_euj4i")
 
-[node name="CrouchingCollisionShape" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4, 0)
-shape = SubResource("CapsuleShape3D_fgxde")
-disabled = true
+[node name="rotation_helper" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
-[node name="RayCast" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8, 0)
-target_position = Vector3(0, 1.6, 0)
+[node name="Camera3D" type="Camera3D" parent="rotation_helper"]
+fov = 80.0
 
-[node name="Neck" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+[node name="flashlight_player" type="SpotLight3D" parent="rotation_helper/Camera3D"]
+visible = false
+light_energy = 3.0
+light_bake_mode = 0
+spot_range = 10.0
+spot_angle = 15.0
+spot_angle_attenuation = 1.56917
 
-[node name="Head" type="Node3D" parent="Neck"]
+[node name="ability_grab" type="RayCast3D" parent="rotation_helper/Camera3D"]
+target_position = Vector3(0, 0, -2)
+script = ExtResource("2_kqr6n")
 
-[node name="Eyes" type="Node3D" parent="Neck/Head"]
-
-[node name="Camera" type="Camera3D" parent="Neck/Head/Eyes"]
-fov = 12.0
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Neck/Head/Eyes"]
-libraries = {
-"": SubResource("AnimationLibrary_8twm5")
-}
-
-[node name="SlidingTimer" type="Timer" parent="."]
-wait_time = 1.5
-one_shot = true
-
-[connection signal="animation_finished" from="Neck/Head/Eyes/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
-[connection signal="timeout" from="SlidingTimer" to="." method="_on_sliding_timer_timeout"]
+[node name="GrabPosition3D" type="Marker3D" parent="rotation_helper/Camera3D/ability_grab"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
