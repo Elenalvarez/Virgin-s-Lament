@@ -1,4 +1,4 @@
-[gd_scene load_steps=107 format=3 uid="uid://bo56ausmm078f"]
+[gd_scene load_steps=119 format=3 uid="uid://bo56ausmm078f"]
 
 [ext_resource type="PackedScene" uid="uid://qp83kfxevoyc" path="res://scenes/player.tscn" id="1_wkk4h"]
 [ext_resource type="Texture2D" uid="uid://ctxe3ch88jtpo" path="res://assets/textures/TEXTURAS FOTOREALISTAS/double_brick_floor_diff_4k.png" id="2_7ufki"]
@@ -30,8 +30,12 @@
 [ext_resource type="Texture2D" uid="uid://c6uelsgyy2bd4" path="res://assets/textures/NUEVAS TEXTURAS/Wood035_1K-JPG/Wood035_1K-JPG_Color.jpg" id="23_cuvi0"]
 [ext_resource type="Texture2D" uid="uid://dpr01li1n2vkx" path="res://assets/textures/NUEVAS TEXTURAS/Wood034_1K-JPG/Wood034_1K-JPG_Color.jpg" id="24_w2cpq"]
 [ext_resource type="Texture2D" uid="uid://snys1qnmb4c8" path="res://assets/textures/NUEVAS TEXTURAS/Wood020_1K-JPG/Wood020_1K-JPG_Color.jpg" id="26_gom3s"]
+[ext_resource type="Texture2D" uid="uid://1wgqrum7ylkq" path="res://assets/textures/NUEVAS TEXTURAS/Leather011_1K-JPG/Leather011_1K-JPG_Color.jpg" id="27_dn5ff"]
 [ext_resource type="Texture2D" uid="uid://bv8fsftn71pba" path="res://assets/textures/NUEVAS TEXTURAS/puerta del baño.png" id="27_fhtg3"]
 [ext_resource type="Texture2D" uid="uid://2kv3j10uapsg" path="res://assets/textures/NUEVAS TEXTURAS/Wood020_1K-JPG/Wood020_1K-JPG_NormalDX.jpg" id="27_wk25n"]
+[ext_resource type="Texture2D" uid="uid://b4jiy4a5tc67b" path="res://assets/textures/NUEVAS TEXTURAS/Leather011_1K-JPG/Leather011_1K-JPG_NormalDX.jpg" id="28_ku4ef"]
+[ext_resource type="Texture2D" uid="uid://dmi45frp76lhf" path="res://assets/textures/NUEVAS TEXTURAS/Metal041A_1K-JPG/Metal041A_1K-JPG_Color.jpg" id="29_1govt"]
+[ext_resource type="Texture2D" uid="uid://cs7hwvgv5gebn" path="res://assets/textures/NUEVAS TEXTURAS/Metal041A_1K-JPG/Metal041A_1K-JPG_Metalness.jpg" id="30_7wegv"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_g2cqf"]
 size = Vector2(13, 13)
@@ -68,12 +72,18 @@ uv1_scale = Vector3(5, 5, 5)
 size = Vector2(3.5, 3.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cx7cl"]
+albedo_color = Color(0.788235, 0.760784, 0.529412, 1)
 albedo_texture = ExtResource("7_uq7ix")
 roughness_texture = ExtResource("9_681q8")
 roughness_texture_channel = 3
 normal_enabled = true
 normal_scale = 1.25
 normal_texture = ExtResource("8_y3e80")
+rim = 0.44
+rim_tint = 1.0
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 0.82
+subsurf_scatter_skin_mode = true
 uv1_scale = Vector3(1.25, 1.25, 1.25)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_g8701"]
@@ -103,6 +113,20 @@ albedo_texture = ExtResource("5_6s3kt")
 metallic = 0.81
 metallic_specular = 0.15
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_q6bdy"]
+size = Vector2(0.9, 0.72)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m47ow"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+depth_draw_mode = 1
+disable_ambient_light = true
+albedo_texture = ExtResource("18_t3efw")
+metallic = 0.38
+metallic_specular = 0.73
+disable_receive_shadows = true
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_p73y8"]
 size = Vector2(0.707, 3)
 center_offset = Vector3(0, 0, 1.5)
@@ -124,8 +148,16 @@ metallic_specular = 0.63
 size = Vector2(3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0yjdl"]
-transparency = 1
+transparency = 2
+alpha_scissor_threshold = 0.316
+alpha_antialiasing_mode = 0
+cull_mode = 2
+depth_draw_mode = 1
+diffuse_mode = 1
 albedo_texture = ExtResource("13_6w7yb")
+normal_scale = -3.47
+heightmap_scale = 6.882
+texture_repeat = false
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_b85wn"]
 size = Vector2(2, 3)
@@ -144,7 +176,7 @@ albedo_color = Color(0.192157, 0.192157, 0.192157, 1)
 albedo_texture = ExtResource("7_stpml")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ehae"]
-albedo_texture = ExtResource("24_w2cpq")
+albedo_texture = ExtResource("26_gom3s")
 uv1_scale = Vector3(2, 2, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uv12h"]
@@ -152,7 +184,7 @@ albedo_texture = ExtResource("14_31wo4")
 uv1_triplanar = true
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_bsiwk"]
-albedo_texture = ExtResource("24_w2cpq")
+albedo_texture = ExtResource("26_gom3s")
 uv1_scale = Vector3(2, 2, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jmqed"]
@@ -168,14 +200,22 @@ normal_enabled = true
 normal_texture = ExtResource("15_tww7b")
 uv1_scale = Vector3(5, 5, 5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k0pw3"]
-albedo_texture = ExtResource("2_7ufki")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4fovt"]
+albedo_color = Color(0.192157, 0.192157, 0.192157, 1)
+albedo_texture = ExtResource("7_stpml")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ncp8j"]
 albedo_color = Color(0.192157, 0.192157, 0.192157, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jaflu"]
 albedo_color = Color(0.192157, 0.192157, 0.192157, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s7g77"]
+albedo_texture = ExtResource("3_3whyy")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1wla7"]
+albedo_texture = ExtResource("3_3whyy")
+uv1_scale = Vector3(2, 2, 2)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_a4s1k"]
 size = Vector2(1.4, 1.083)
@@ -270,6 +310,23 @@ alpha_scissor_threshold = 0.676
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("12_4vkhc")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3wl6n"]
+albedo_texture = ExtResource("27_dn5ff")
+normal_enabled = true
+normal_texture = ExtResource("28_ku4ef")
+uv1_scale = Vector3(3, 3, 3)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_46yhk"]
+albedo_texture = ExtResource("29_1govt")
+metallic = 1.0
+metallic_texture = ExtResource("30_7wegv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c45a6"]
+albedo_texture = ExtResource("29_1govt")
+metallic = 1.0
+metallic_texture = ExtResource("30_7wegv")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8c3ts"]
 albedo_texture = ExtResource("26_gom3s")
 normal_enabled = true
@@ -313,7 +370,7 @@ albedo_texture = ExtResource("7_stpml")
 albedo_texture_force_srgb = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4p3nn"]
-albedo_texture = ExtResource("24_w2cpq")
+albedo_texture = ExtResource("26_gom3s")
 uv1_scale = Vector3(1.5, 1.5, 1.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j72d8"]
@@ -330,21 +387,29 @@ size = Vector2(0.6, 2.1)
 transparency = 1
 albedo_texture = ExtResource("27_fhtg3")
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_q6bdy"]
-size = Vector2(0.9, 0.72)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m47ow"]
-transparency = 1
-albedo_texture = ExtResource("18_t3efw")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gueep"]
 albedo_texture = ExtResource("24_w2cpq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3sv7o"]
+albedo_color = Color(1, 1, 0.301961, 1)
+metallic = 1.0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_nxawh"]
 size = Vector2(10, 10)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vykhk"]
-albedo_color = Color(0, 0, 0, 1)
+albedo_color = Color(0.619608, 0.741176, 0.976471, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_trhbd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cqkje"]
+metallic = 1.0
+metallic_specular = 1.0
+metallic_texture = ExtResource("29_1govt")
+emission_enabled = true
+emission_energy_multiplier = 2.31
+refraction_enabled = true
+refraction_scale = -0.44
 
 [node name="HABITACIÓN 313" type="Node3D"]
 
@@ -416,6 +481,12 @@ mesh = SubResource("PlaneMesh_8jv1l")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_sgxmj")
 
+[node name="TELESCOPIO" type="MeshInstance3D" parent="SOLARIUM"]
+transform = Transform3D(8.62584e-08, 0.597499, -1.37586, 9.95903e-08, 1.37586, 0.597499, 1.5, -1.25708e-07, 3.94496e-08, -0.897295, -2.14624, 0.670576)
+mesh = SubResource("PlaneMesh_q6bdy")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_m47ow")
+
 [node name="LATERAL 1" type="MeshInstance3D" parent="SOLARIUM"]
 transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 0.61, -2.75, 0)
 mesh = SubResource("PlaneMesh_p73y8")
@@ -427,12 +498,12 @@ mesh = SubResource("PlaneMesh_p73y8")
 surface_material_override/0 = SubResource("StandardMaterial3D_l8bdt")
 
 [node name="FLOWEYS" type="MeshInstance3D" parent="SOLARIUM"]
-transform = Transform3D(-1, 1.74846e-07, -8.74228e-08, 1.74846e-07, 1, -8.74228e-08, 8.74228e-08, -8.74228e-08, -1, -0.704519, -2.61681, 1.5)
+transform = Transform3D(-1, 1.74846e-07, -8.7423e-08, 1.74846e-07, 1, -8.74228e-08, 8.74228e-08, -8.74228e-08, -1, -0.535625, -2.35526, 1.5)
 mesh = SubResource("PlaneMesh_h8do2")
 surface_material_override/0 = SubResource("StandardMaterial3D_0yjdl")
 
 [node name="FLOWEY 2" type="MeshInstance3D" parent="SOLARIUM"]
-transform = Transform3D(-1, 1.74846e-07, -8.74228e-08, 1.74846e-07, 1, -8.74228e-08, 8.74228e-08, -8.74228e-08, -1, -0.625568, -2.80011, 1.46724)
+transform = Transform3D(-1, 1.74846e-07, -8.74232e-08, 1.74846e-07, 1, -8.74228e-08, 8.74228e-08, -8.74228e-08, -1, -0.869359, -2.76898, 1.47706)
 mesh = SubResource("PlaneMesh_b85wn")
 surface_material_override/0 = SubResource("StandardMaterial3D_icfd4")
 
@@ -481,9 +552,9 @@ size = Vector3(0.6, 2.1, 0.3)
 
 [node name="PARED BAÑO 2" type="CSGBox3D" parent="PARED BAÑO 2"]
 transform = Transform3D(0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 1.98032, 2.323, 0, -0.0118027)
-material_override = SubResource("StandardMaterial3D_k0pw3")
 use_collision = true
 size = Vector3(0.12, 20, 1.26935)
+material = SubResource("StandardMaterial3D_4fovt")
 
 [node name="OSCURIDAD" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27643, 17.3285, -0.540054)
@@ -508,7 +579,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 1.61088)
 [node name="CHIMENEA CON ESCALONES" type="Node" parent="."]
 
 [node name="CHIMENEA BASE2" type="CSGCombiner3D" parent="CHIMENEA CON ESCALONES"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.863294, 5.42, 2.839)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.863294, 6.12473, 2.839)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CHIMENEA CON ESCALONES/CHIMENEA BASE2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -4.98712, -4.5649)
@@ -522,23 +593,26 @@ size = Vector3(1.2, 2, 0.5)
 material = SubResource("StandardMaterial3D_jaflu")
 
 [node name="1ER ESCALON" type="CSGBox3D" parent="CHIMENEA CON ESCALONES"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53629, -0.09517, -1.34679)
-size = Vector3(2, 0.18, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53629, 0.609564, -1.34679)
+material_override = SubResource("StandardMaterial3D_s7g77")
+use_collision = true
+size = Vector3(3.2755, 0.18, 2.49752)
+material = SubResource("StandardMaterial3D_1wla7")
 
 [node name="2O ESCALON" type="CSGBox3D" parent="CHIMENEA CON ESCALONES/1ER ESCALON"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.529013, -0.170734, 0.409709)
-size = Vector3(2, 0.18, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.57263, -0.170734, 0.409709)
+size = Vector3(3.15828, 0.18, 2.45162)
 
 [node name="3ER ESCALON" type="CSGBox3D" parent="CHIMENEA CON ESCALONES/1ER ESCALON"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04924, -0.35813, 0.849985)
-size = Vector3(2, 0.18, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.85216, -0.350529, 0.707476)
+size = Vector3(3.93289, 0.18, 2.8229)
 
 [node name="2O ESCALON2" type="CSGBox3D" parent="CHIMENEA CON ESCALONES/1ER ESCALON"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53165, -0.528864, 1.18913)
-size = Vector3(2, 0.18, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25581, -0.528864, 0.898351)
+size = Vector3(4.31076, 0.18, 3.67042)
 
 [node name="dibujo  CHIMENEA" type="MeshInstance3D" parent="CHIMENEA CON ESCALONES"]
-transform = Transform3D(0.707107, 0.707107, -3.09086e-08, 0, -4.37114e-08, -1, -0.707107, 0.707107, -3.09086e-08, -1.68255, 0.534633, -1.53873)
+transform = Transform3D(0.707107, 0.707107, -3.09086e-08, 0, -4.37114e-08, -1, -0.707107, 0.707107, -3.09086e-08, -1.68255, 1.23937, -1.53873)
 mesh = SubResource("PlaneMesh_a4s1k")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_ivftk")
@@ -559,7 +633,7 @@ mesh = SubResource("PlaneMesh_lelah")
 surface_material_override/0 = SubResource("StandardMaterial3D_pl1jy")
 
 [node name="CHIMENEA BASE" type="CSGCombiner3D" parent="CHIMENEA CON ESCALONES"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.827842, 5, 2.83863)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.827842, 5.70473, 2.83863)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CHIMENEA CON ESCALONES/CHIMENEA BASE"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.04267, -4.95, -4.565)
@@ -573,7 +647,7 @@ size = Vector3(1.2, 2, 0.5)
 material = SubResource("StandardMaterial3D_4iiu3")
 
 [node name="CHIMENEA BASE3" type="CSGCombiner3D" parent="CHIMENEA CON ESCALONES"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.828, 6.033, 2.839)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.828, 6.73773, 2.839)
 operation = 1
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CHIMENEA CON ESCALONES/CHIMENEA BASE3"]
@@ -588,12 +662,12 @@ size = Vector3(1.2, 2, 0.5)
 material = SubResource("StandardMaterial3D_01aac")
 
 [node name="CONDUTCO" type="CSGBox3D" parent="CHIMENEA CON ESCALONES"]
-transform = Transform3D(0.707107, 0, -0.707107, 0, 1.38228, 0, 0.707107, 0, 0.707107, -2.22289, 11.2036, -2.0506)
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1.38228, 0, 0.707107, 0, 0.707107, -2.22289, 11.9083, -2.0506)
 size = Vector3(0.6, 12.4629, 0.6)
 material = SubResource("StandardMaterial3D_22vxa")
 
 [node name="CSGCombiner3D3" type="CSGCombiner3D" parent="CHIMENEA CON ESCALONES"]
-transform = Transform3D(1, 0, 0, 0, 1.38228, 0, 0, 0, 1, 0.139185, -0.425089, 0.146917)
+transform = Transform3D(1, 0, 0, 0, 1.38228, 0, 0, 0, 1, 0.139185, 0.279645, 0.146917)
 
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="CHIMENEA CON ESCALONES/CSGCombiner3D3"]
 transform = Transform3D(0.937846, 0, 0.937846, 0, 1.30837, 0, -0.937846, 0, 0.937846, -2.37846, 1.07639, -1.27907)
@@ -608,18 +682,18 @@ size = Vector3(1.5, 2, 1)
 material = SubResource("StandardMaterial3D_f1l72")
 
 [node name="VIRGENSITA DE GUADALUPE" type="MeshInstance3D" parent="CHIMENEA CON ESCALONES"]
-transform = Transform3D(0.707107, 0.707107, -3.09086e-08, 0, -4.37114e-08, -1, -0.707107, 0.707107, -3.09086e-08, -1.64067, 1.31488, -1.55983)
+transform = Transform3D(0.707107, 0.707107, -3.09086e-08, 0, -4.37114e-08, -1, -0.707107, 0.707107, -3.09086e-08, -1.64067, 2.01961, -1.55983)
 mesh = SubResource("PlaneMesh_isr4t")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_en24t")
 
 [node name="MURO NEGRO" type="MeshInstance3D" parent="CHIMENEA CON ESCALONES"]
-transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -2.4834, 0.737547, -2.13334)
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -2.4834, 1.44228, -2.13334)
 mesh = SubResource("PlaneMesh_6gtk7")
 surface_material_override/0 = SubResource("StandardMaterial3D_1bnfb")
 
 [node name="MURO NEGRO2" type="MeshInstance3D" parent="CHIMENEA CON ESCALONES"]
-transform = Transform3D(-8.88178e-16, 0, -1, -1, -4.37114e-08, 0, -4.37114e-08, 1, 0, -2.26934, 0.717655, -2.34802)
+transform = Transform3D(-8.88178e-16, 0, -1, -1, -4.37114e-08, 0, -4.37114e-08, 1, 0, -2.26934, 1.42239, -2.34802)
 mesh = SubResource("PlaneMesh_6gtk7")
 surface_material_override/0 = SubResource("StandardMaterial3D_1bnfb")
 
@@ -655,7 +729,7 @@ operation = 2
 size = Vector3(3, 3, 3)
 
 [node name="PIANO" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, -2.16724, 0.75, 1.67343)
+transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, -2.16724, 0.75, 2.47126)
 mesh = SubResource("PlaneMesh_wrnw0")
 surface_material_override/0 = SubResource("StandardMaterial3D_1wyao")
 
@@ -673,6 +747,34 @@ surface_material_override/0 = SubResource("StandardMaterial3D_erc65")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00405121, -0.0151192, 0)
 use_collision = true
 size = Vector3(0.305, 0.025, 1.524)
+
+[node name="SILLÍN" type="CSGCylinder3D" parent="PIANO"]
+transform = Transform3D(0.965925, -0.258819, 0, 0.258819, 0.965925, 0, 0, 0, 1, 0.397154, -0.168703, 0)
+radius = 0.187373
+height = 0.0476833
+sides = 30
+material = SubResource("StandardMaterial3D_3wl6n")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="PIANO/SILLÍN"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.220738, 0)
+radius = 0.0309426
+height = 0.485602
+sides = 10
+material = SubResource("StandardMaterial3D_46yhk")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="PIANO/SILLÍN"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.473924, 0)
+radius = 0.171636
+height = 0.0280014
+sides = 10
+material = SubResource("StandardMaterial3D_c45a6")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="PIANO/SILLÍN"]
+transform = Transform3D(1, 1.95399e-14, 0, -1.95399e-14, 1, 0, 0, 0, 1, 0, -0.0285485, 0)
+radius = 0.200259
+height = 0.0713452
+sides = 10
+material = SubResource("StandardMaterial3D_c45a6")
 
 [node name="BUREAU MICROSCOP" type="CSGBox3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.450827, 0.9, 3.984)
@@ -772,11 +874,6 @@ transform = Transform3D(1.31134e-07, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, 1.
 mesh = SubResource("PlaneMesh_2qft1")
 surface_material_override/0 = SubResource("StandardMaterial3D_caib5")
 
-[node name="TELESCOPIO" type="MeshInstance3D" parent="."]
-transform = Transform3D(-8.0303e-08, -0.388228, 1.44889, 1.5, -6.55671e-08, 6.55671e-08, 4.63629e-08, 1.44889, 0.388228, 1.29656, 0.670576, -2.20519)
-mesh = SubResource("PlaneMesh_q6bdy")
-surface_material_override/0 = SubResource("StandardMaterial3D_m47ow")
-
 [node name="INTERRUPTOR" type="CSGBox3D" parent="."]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 3.79529, 1.20267, 2.429)
 size = Vector3(0.01, 0.073, 0.073)
@@ -790,14 +887,93 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.22643, 1.43925, 4.62661)
 size = Vector3(0.937603, 3.15551, 0.180295)
 material = SubResource("StandardMaterial3D_gueep")
 
+[node name="MANILLA" type="CSGCylinder3D" parent="CSGBox3D2"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.344025, -0.249274, -0.124989)
+radius = 0.0502064
+height = 0.0668283
+material = SubResource("StandardMaterial3D_3sv7o")
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.911303, -0.329936, -0.246312, 0, -0.598227, 0.801327, -0.411737, -0.730251, -0.545166, -0.924009, 6.37532, -6.29784)
 light_color = Color(0.65098, 0.0901961, 0.113725, 1)
 light_volumetric_fog_energy = 2.096
 shadow_enabled = true
+shadow_transmittance_bias = 3.839
+shadow_blur = 0.855
 directional_shadow_mode = 1
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.74228e-08, 1, 4.37114e-08, 0.452651, 1.85039, -5.55966)
 mesh = SubResource("PlaneMesh_nxawh")
 surface_material_override/0 = SubResource("StandardMaterial3D_vykhk")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.867716, 1.43925, 6.02317)
+size = Vector3(0.937603, 3.15551, 0.180295)
+material = SubResource("StandardMaterial3D_gueep")
+
+[node name="MANILLA" type="CSGCylinder3D" parent="CSGBox3D3"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.344025, -0.249274, -0.124989)
+radius = 0.0502064
+height = 0.0668283
+material = SubResource("StandardMaterial3D_3sv7o")
+
+[node name="SILLÍN" type="CSGCylinder3D" parent="."]
+transform = Transform3D(0.999999, 5.96046e-08, 0, -5.96046e-08, 0.999999, 0, 0, 0, 1, 2.41053, 0.489951, -1.56619)
+use_collision = true
+radius = 0.187373
+height = 0.0476833
+sides = 30
+material = SubResource("StandardMaterial3D_3wl6n")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="SILLÍN"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.220738, 0)
+radius = 0.0309426
+height = 0.485602
+sides = 10
+material = SubResource("StandardMaterial3D_46yhk")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="SILLÍN"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.473924, 0)
+radius = 0.171636
+height = 0.0280014
+sides = 10
+material = SubResource("StandardMaterial3D_c45a6")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="SILLÍN"]
+transform = Transform3D(1, 1.95399e-14, 0, -1.95399e-14, 1, 0, 0, 0, 1, 0, -0.0285485, 0)
+radius = 0.200259
+height = 0.0713452
+sides = 10
+material = SubResource("StandardMaterial3D_c45a6")
+
+[node name="LAVABO" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.88322, 0.467531, 2.59968)
+size = Vector3(0.6, 0.85, 1.13722)
+material = SubResource("StandardMaterial3D_trhbd")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="LAVABO"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.168026, 1.29099, 0)
+size = Vector3(0.025054, 1, 1)
+material = SubResource("StandardMaterial3D_cqkje")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="LAVABO"]
+transform = Transform3D(1.31545, 0, 0, 0, 1, 0, 0, 0, 0.878811, -0.0644994, -0.0289747, 1.4834)
+radius = 0.457686
+height = 0.164907
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="LAVABO/CSGCylinder3D2"]
+transform = Transform3D(1.50742, 0, 0, 0, 1, 0, 0, 0, 1.09901, 0.023263, 0.107698, 0.0053134)
+radius = 0.457686
+height = 0.0315807
+sides = 15
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="LAVABO"]
+transform = Transform3D(1.31545, 0, 0, 0, 1, 0, 0, 0, 0.878811, -0.25883, -0.284309, 1.4834)
+radius = 0.240416
+height = 0.425122
+sides = 15
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="LAVABO"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226886, 0.373892, 1.4763)
+size = Vector3(0.432746, 0.715855, 0.717942)
