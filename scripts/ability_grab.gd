@@ -1,14 +1,29 @@
 extends RayCast3D
 
+@onready var prompt = $Prompt
+
 var object_grabbed = null
 var mass_limit = 50
 var throw_force = 10
 
 var can_use = true
 
+func _ready():
+	add_exception(owner)
+
 # This entire script is dedicated to the ability_grab node and it's child node GradPosition3D. It's allows players to pick up and throw Rigid Bodies in a similar fashion to Source games.
 # This section asks the raycast to check for a Rigid Body, see if it qualifies to be carried, and grab it player isn't currently carrying a Rigid Body.
 func _process(delta):
+	#--PUNTERO--
+	prompt.text = ""
+	
+	if is_colliding():
+		var detected = get_collider()
+		
+		if detected is Interactuable :
+			prompt.text = detected.name
+	#--FIN--
+	
 	if Input.is_key_pressed(KEY_E):
 		if can_use:
 			can_use = false
