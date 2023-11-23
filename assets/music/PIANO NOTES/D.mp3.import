@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bavuof1njb33s"
+path="res://.godot/imported/D.mp3-3c11fb790a7f07645d6349a5143d0531.mp3str"
+
+[deps]
+
+source_file="res://assets/music/PIANO NOTES/D.mp3"
+dest_files=["res://.godot/imported/D.mp3-3c11fb790a7f07645d6349a5143d0531.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

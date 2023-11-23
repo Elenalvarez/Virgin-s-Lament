@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bpib2uoyygnn"
+path="res://.godot/imported/A.mp3-1f2feffe1e09c6257dd5c6ef7f7219bb.mp3str"
+
+[deps]
+
+source_file="res://assets/music/PIANO NOTES/A.mp3"
+dest_files=["res://.godot/imported/A.mp3-1f2feffe1e09c6257dd5c6ef7f7219bb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
