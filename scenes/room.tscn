@@ -1,6 +1,6 @@
 [gd_scene load_steps=120 format=3 uid="uid://bo56ausmm078f"]
 
-[ext_resource type="PackedScene" uid="uid://qp83kfxevoyc" path="res://scenes/player.tscn" id="1_wkk4h"]
+[ext_resource type="PackedScene" uid="uid://qp83kfxevoyc" path="res://scenes/Player.tscn" id="1_wkk4h"]
 [ext_resource type="Texture2D" uid="uid://ctxe3ch88jtpo" path="res://assets/textures/TEXTURAS FOTOREALISTAS/double_brick_floor_diff_4k.png" id="2_7ufki"]
 [ext_resource type="PackedScene" uid="uid://bb5ge7khi7uot" path="res://scenes/menu.tscn" id="2_qn77n"]
 [ext_resource type="Texture2D" uid="uid://ysi1ng4ocicb" path="res://assets/textures/NUEVAS TEXTURAS/Tiles110_1K-JPG/Tiles110_1K-JPG_Color.jpg" id="3_3whyy"]
@@ -804,8 +804,9 @@ omni_range = 4.443
 omni_attenuation = 0.554785
 omni_shadow_mode = 0
 
-[node name="OmniLight3D3" type="OmniLight3D" parent="Luces"]
+[node name="LuzB" type="OmniLight3D" parent="Luces"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.70009, 2.5, 3.57392)
+visible = false
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Luces"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.74491, 2.5, -0.790538)
@@ -821,6 +822,30 @@ shadow_enabled = true
 shadow_transmittance_bias = 3.839
 shadow_blur = 0.855
 directional_shadow_mode = 1
+
+[node name="OSCURIDAD2" type="OmniLight3D" parent="Luces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.15406, 0.956615, 2.33355)
+light_energy = 16.0
+light_indirect_energy = 1.333
+light_volumetric_fog_energy = 0.0
+light_size = 0.317
+light_negative = true
+light_specular = 2.874
+omni_range = 1.65342
+omni_attenuation = 0.0122591
+omni_shadow_mode = 0
+
+[node name="OSCURIDAD3" type="OmniLight3D" parent="Luces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.05946, 0.729316, 4.3486)
+light_energy = 16.0
+light_indirect_energy = 1.333
+light_volumetric_fog_energy = 0.0
+light_size = 0.317
+light_negative = true
+light_specular = 2.874
+omni_range = 1.47601
+omni_attenuation = 0.0122591
+omni_shadow_mode = 0
 
 [node name="Objetos interactuables" type="Node3D" parent="."]
 

@@ -22,7 +22,9 @@ func _process(delta):
 		
 		if detected is Interactuable :
 			prompt.text = detected.name
-	#--FIN--
+		
+		if prompt.text == "Switch" and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+			cambiar_switch()
 	
 	if Input.is_key_pressed(KEY_E):
 		if can_use:
@@ -57,3 +59,12 @@ func release():
 	object_grabbed.axis_lock_angular_y = false
 	object_grabbed.axis_lock_angular_z = false
 	object_grabbed = null
+	
+# Función para cambiar la luz del baño
+func cambiar_switch():
+	var luz = get_parent().get_parent().get_parent().get_parent().get_node("Luces/LuzB")
+	var osc1 = get_parent().get_parent().get_parent().get_parent().get_node("Luces/OSCURIDAD2")
+	var osc2 = get_parent().get_parent().get_parent().get_parent().get_node("Luces/OSCURIDAD3")
+	luz.visible = !luz.visible
+	osc1.visible = !luz.visible
+	osc2.visible = !luz.visible
