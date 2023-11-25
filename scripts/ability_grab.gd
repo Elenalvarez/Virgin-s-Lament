@@ -23,8 +23,15 @@ func _process(delta):
 		if detected is Interactuable :
 			prompt.text = detected.name
 		
+		#PULSAR INTERRUPTOR
 		if prompt.text == "Switch" and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 			cambiar_switch()
+		
+		#PULSAR CAJÓN SUP DCHA
+		if prompt.text == "Top right drawer" and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+			var cajon = get_parent().get_parent().get_parent().get_parent().get_node("CajonSupDcha")
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			cajon.visible = true
 	
 	if Input.is_key_pressed(KEY_E):
 		if can_use:

@@ -1,0 +1,95 @@
+[gd_scene load_steps=4 format=3 uid="uid://i4jkrt6wiecf"]
+
+[ext_resource type="Script" path="res://scripts/cajon_sup_dcha.gd" id="1_w5h0p"]
+[ext_resource type="Texture2D" uid="uid://ldm05w7whxsx" path="res://assets/imagenes/cajon1.png" id="2_hq7hn"]
+[ext_resource type="Texture2D" uid="uid://bhtk3ndkpkbn7" path="res://assets/exit_gold.png" id="3_8ddtr"]
+
+[node name="CajonSupDcha" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_w5h0p")
+
+[node name="bandas" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -30.0
+offset_top = -47.0
+offset_right = 1228.0
+offset_bottom = 711.0
+color = Color(0.117647, 0.117647, 0.117647, 1)
+
+[node name="Cajon1" type="Sprite2D" parent="."]
+position = Vector2(585, 325)
+scale = Vector2(0.22, 0.22)
+texture = ExtResource("2_hq7hn")
+
+[node name="B1" type="ColorRect" parent="."]
+offset_left = 685.0
+offset_top = 26.0
+offset_right = 727.0
+offset_bottom = 119.0
+color = Color(0.67451, 0.211765, 0.227451, 1)
+
+[node name="Button1" type="Button" parent="B1"]
+offset_right = 42.0
+offset_bottom = 93.0
+focus_mode = 0
+flat = true
+
+[node name="B2" type="ColorRect" parent="."]
+offset_left = 753.0
+offset_top = 26.0
+offset_right = 795.0
+offset_bottom = 119.0
+color = Color(0.67451, 0.211765, 0.227451, 1)
+
+[node name="Button2" type="Button" parent="B2"]
+offset_left = -1.0
+offset_right = 41.0
+offset_bottom = 93.0
+focus_mode = 0
+flat = true
+
+[node name="B3" type="ColorRect" parent="."]
+offset_left = 822.0
+offset_top = 26.0
+offset_right = 865.0
+offset_bottom = 119.0
+color = Color(0.67451, 0.211765, 0.227451, 1)
+
+[node name="Button3" type="Button" parent="B3"]
+offset_right = 43.0
+offset_bottom = 93.0
+focus_mode = 0
+flat = true
+
+[node name="B4" type="ColorRect" parent="."]
+offset_left = 890.0
+offset_top = 26.0
+offset_right = 932.0
+offset_bottom = 119.0
+color = Color(0.67451, 0.211765, 0.227451, 1)
+
+[node name="Button4" type="Button" parent="B4"]
+offset_right = 42.0
+offset_bottom = 93.0
+focus_mode = 0
+flat = true
+
+[node name="ExitGold" type="Sprite2D" parent="."]
+position = Vector2(1118, 32)
+scale = Vector2(2.30556, 2.30556)
+texture = ExtResource("3_8ddtr")
+
+[node name="Salir" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1093.0
+offset_top = 7.0
+offset_right = 1142.0
+offset_bottom = 53.0
+flat = true
+
+[connection signal="pressed" from="B1/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="B2/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="B3/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="B4/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]
