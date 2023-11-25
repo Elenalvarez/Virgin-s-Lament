@@ -1,4 +1,4 @@
-[gd_scene load_steps=120 format=3 uid="uid://bo56ausmm078f"]
+[gd_scene load_steps=121 format=3 uid="uid://bo56ausmm078f"]
 
 [ext_resource type="PackedScene" uid="uid://qp83kfxevoyc" path="res://scenes/Player.tscn" id="1_wkk4h"]
 [ext_resource type="Texture2D" uid="uid://ctxe3ch88jtpo" path="res://assets/textures/TEXTURAS FOTOREALISTAS/double_brick_floor_diff_4k.png" id="2_7ufki"]
@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://dmi45frp76lhf" path="res://assets/textures/NUEVAS TEXTURAS/Metal041A_1K-JPG/Metal041A_1K-JPG_Color.jpg" id="29_1govt"]
 [ext_resource type="Texture2D" uid="uid://cs7hwvgv5gebn" path="res://assets/textures/NUEVAS TEXTURAS/Metal041A_1K-JPG/Metal041A_1K-JPG_Metalness.jpg" id="30_7wegv"]
 [ext_resource type="Script" path="res://scripts/interactuable.gd" id="32_e5qnr"]
+[ext_resource type="PackedScene" uid="uid://i4jkrt6wiecf" path="res://scenes/cajon_sup_dcha.tscn" id="38_kuygc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_edv0k"]
 albedo_texture = ExtResource("7_stpml")
@@ -1046,3 +1047,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_1bnfb")
 transform = Transform3D(-8.88178e-16, 0, -1, -1, -4.37114e-08, 0, -4.37114e-08, 1, 0, -2.26934, 1.42239, -2.34802)
 mesh = SubResource("PlaneMesh_6gtk7")
 surface_material_override/0 = SubResource("StandardMaterial3D_1bnfb")
+
+[node name="CajonSupDcha" parent="." instance=ExtResource("38_kuygc")]
+visible = false
