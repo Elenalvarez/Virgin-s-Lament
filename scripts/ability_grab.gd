@@ -26,6 +26,7 @@ func _process(delta):
 		#PULSAR INTERRUPTOR
 		if prompt.text == "Switch" and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 			cambiar_switch()
+			await get_tree().create_timer(2).timeout
 		
 		#PULSAR CAJÓN SUP DCHA
 		if prompt.text == "Top right drawer" and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
