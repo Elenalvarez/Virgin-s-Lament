@@ -1,6 +1,12 @@
+ Elena15nov
 [gd_scene load_steps=11 format=3 uid="uid://butakrhcfh4lo"]
 
 [ext_resource type="Script" path="res://scripts/Piano.gd" id="1_etxf5"]
+
+[gd_scene load_steps=11 format=3 uid="uid://m1pltqsqoxjm"]
+
+[ext_resource type="Script" path="res://scenes/Piano.gd" id="1_cxhhe"]
+main
 [ext_resource type="Texture2D" uid="uid://ckn1tkxip3g1o" path="res://assets/textures/NUEVAS TEXTURAS/teclado.png" id="1_rlqbu"]
 [ext_resource type="AudioStream" uid="uid://xqde3eo6bahs" path="res://assets/music/PIANO NOTES/C.mp3" id="3_5usx4"]
 [ext_resource type="AudioStream" uid="uid://bavuof1njb33s" path="res://assets/music/PIANO NOTES/D.mp3" id="4_03cvs"]
@@ -11,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://ifrn2pdfjsk" path="res://assets/music/PIANO NOTES/B.mp3" id="9_6rpms"]
 [ext_resource type="Texture2D" uid="uid://bhtk3ndkpkbn7" path="res://assets/exit_gold.png" id="10_vwesr"]
 
+ Elena15nov
 [node name="Piano" type="Control"]
 layout_mode = 3
 anchors_preset = 0
@@ -20,6 +27,11 @@ offset_right = 6.0
 offset_bottom = 492.0
 script = ExtResource("1_etxf5")
 
+[node name="Piano" type="Node2D"]
+position = Vector2(6, 492)
+script = ExtResource("1_cxhhe")
+main
+
 [node name="Teclado" type="Sprite2D" parent="."]
 position = Vector2(571.181, -495.473)
 rotation = 1.5708
@@ -27,85 +39,114 @@ scale = Vector2(1.0192, 1.34286)
 texture = ExtResource("1_rlqbu")
 
 [node name="Button" type="Button" parent="."]
+Elena15nov
 layout_mode = 0
+
+ main
 offset_left = -2.0
 offset_top = -430.0
 offset_right = 166.0
 offset_bottom = 158.0
 scale = Vector2(0.960001, 1)
+ Elena15nov
 focus_mode = 0
+main
 flat = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button"]
 stream = ExtResource("3_5usx4")
 
 [node name="Button2" type="Button" parent="."]
+Elena15nov
 layout_mode = 0
+main
 offset_left = 163.0
 offset_top = -430.0
 offset_right = 325.0
 offset_bottom = 158.0
+Elena15nov
 focus_mode = 0
+main
 flat = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button2"]
 stream = ExtResource("4_03cvs")
 
 [node name="Button3" type="Button" parent="."]
+Elena15nov
 layout_mode = 0
+main
 offset_left = 327.0
 offset_top = -428.0
 offset_right = 485.0
 offset_bottom = 158.0
+Elena15nov
 focus_mode = 0
+main
 flat = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button3"]
 stream = ExtResource("5_ctj2r")
 
 [node name="Button4" type="Button" parent="."]
+Elena15nov
 layout_mode = 0
+main
 offset_left = 487.0
 offset_top = -429.0
 offset_right = 652.0
 offset_bottom = 158.0
+Elena15nov
 focus_mode = 0
+main
 flat = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button4"]
 stream = ExtResource("6_il8jy")
 
 [node name="Button5" type="Button" parent="."]
+Elena15nov
 layout_mode = 0
+main
 offset_left = 654.0
 offset_top = -425.0
 offset_right = 817.0
 offset_bottom = 155.0
+Elena15nov
 focus_mode = 0
+main
 flat = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button5"]
 stream = ExtResource("7_ipfdi")
 
 [node name="Button6" type="Button" parent="."]
+Elena15nov
 layout_mode = 0
+main
 offset_left = 811.0
 offset_top = -429.0
 offset_right = 979.0
 offset_bottom = 158.0
+Elena15nov
 focus_mode = 0
+main
 flat = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button6"]
 stream = ExtResource("8_kp83d")
 
 [node name="Button7" type="Button" parent="."]
+Elena15nov
 layout_mode = 0
+main
 offset_left = 982.0
 offset_top = -428.0
 offset_right = 1141.0
 offset_bottom = 158.0
+Elena15nov
 focus_mode = 0
+main
 flat = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button7"]
@@ -117,7 +158,9 @@ scale = Vector2(2.33334, 2.61111)
 texture = ExtResource("10_vwesr")
 
 [node name="exit_button" type="Button" parent="."]
+Elena15nov
 layout_mode = 0
+main
 offset_left = 1091.0
 offset_top = -485.0
 offset_right = 1133.0
