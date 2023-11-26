@@ -32,6 +32,12 @@ func _process(delta):
 			var cajon = get_parent().get_parent().get_parent().get_parent().get_node("CajonSupDcha")
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			cajon.visible = true
+			
+		#PULSAR EL PIANO
+		if prompt.text == "Piano" and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+			var piano = get_parent().get_parent().get_parent().get_parent().get_node("Piano")
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			piano.visible = true
 	
 	if Input.is_key_pressed(KEY_E):
 		if can_use:
