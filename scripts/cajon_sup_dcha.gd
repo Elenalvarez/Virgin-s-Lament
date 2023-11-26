@@ -53,6 +53,7 @@ func solucion():
 	if con1== 3 and con2== 1 and con3== 2 and con4== 0:
 		get_node(".").visible = false
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		queue_free()
 
 
 func _on_salir_pressed():

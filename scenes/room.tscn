@@ -1,4 +1,8 @@
+Elena15nov
+[gd_scene load_steps=122 format=3 uid="uid://bo56ausmm078f"]
+
 [gd_scene load_steps=122 format=3 uid="uid://bdowj22bmeqvg"]
+main
 
 [ext_resource type="PackedScene" uid="uid://qp83kfxevoyc" path="res://scenes/player.tscn" id="1_wkk4h"]
 [ext_resource type="Texture2D" uid="uid://ctxe3ch88jtpo" path="res://assets/textures/TEXTURAS FOTOREALISTAS/double_brick_floor_diff_4k.png" id="2_7ufki"]
@@ -38,7 +42,11 @@
 [ext_resource type="Texture2D" uid="uid://cs7hwvgv5gebn" path="res://assets/textures/NUEVAS TEXTURAS/Metal041A_1K-JPG/Metal041A_1K-JPG_Metalness.jpg" id="30_7wegv"]
 [ext_resource type="Script" path="res://scripts/interactuable.gd" id="32_e5qnr"]
 [ext_resource type="PackedScene" uid="uid://i4jkrt6wiecf" path="res://scenes/cajon_sup_dcha.tscn" id="38_kuygc"]
+Elena15nov
+[ext_resource type="PackedScene" uid="uid://butakrhcfh4lo" path="res://scenes/Piano.tscn" id="39_7f7sf"]
+
 [ext_resource type="PackedScene" uid="uid://m1pltqsqoxjm" path="res://scenes/Piano.tscn" id="39_xmoek"]
+main
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_edv0k"]
 albedo_texture = ExtResource("7_stpml")
@@ -1052,5 +1060,9 @@ surface_material_override/0 = SubResource("StandardMaterial3D_1bnfb")
 [node name="CajonSupDcha" parent="." instance=ExtResource("38_kuygc")]
 visible = false
 
+Elena15nov
+[node name="Piano" parent="." instance=ExtResource("39_7f7sf")]
+
 [node name="Piano" parent="." instance=ExtResource("39_xmoek")]
+main
 visible = false
