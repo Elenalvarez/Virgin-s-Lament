@@ -1,6 +1,6 @@
 [gd_scene load_steps=157 format=3 uid="uid://bo56ausmm078f"]
 
-[ext_resource type="PackedScene" uid="uid://qp83kfxevoyc" path="res://scenes/player.tscn" id="1_wkk4h"]
+[ext_resource type="PackedScene" uid="uid://qp83kfxevoyc" path="res://scenes/Player.tscn" id="1_wkk4h"]
 [ext_resource type="Texture2D" uid="uid://ctxe3ch88jtpo" path="res://assets/textures/TEXTURAS FOTOREALISTAS/double_brick_floor_diff_4k.png" id="2_7ufki"]
 [ext_resource type="PackedScene" uid="uid://bb5ge7khi7uot" path="res://scenes/menu.tscn" id="2_qn77n"]
 [ext_resource type="Texture2D" uid="uid://ysi1ng4ocicb" path="res://assets/textures/NUEVAS TEXTURAS/Tiles110_1K-JPG/Tiles110_1K-JPG_Color.jpg" id="3_3whyy"]
@@ -52,6 +52,12 @@
 transparency = 1
 blend_mode = 1
 albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_6lksr"]
+size = Vector2(100, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y5ymr"]
+albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jqpjk"]
 transparency = 1
@@ -395,6 +401,16 @@ alpha_scissor_threshold = 0.676
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("12_4vkhc")
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_7beli"]
+size = Vector2(2, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o2qw5"]
+albedo_texture = ExtResource("47_lurs0")
+normal_enabled = true
+subsurf_scatter_enabled = true
+subsurf_scatter_skin_mode = true
+subsurf_scatter_texture = ExtResource("47_lurs0")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ab4sa"]
 albedo_texture = ExtResource("29_1govt")
 
@@ -526,22 +542,6 @@ normal_enabled = true
 normal_texture = ExtResource("44_t2eae")
 uv1_triplanar = true
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_6lksr"]
-size = Vector2(100, 100)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y5ymr"]
-albedo_color = Color(0, 0, 0, 1)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_7beli"]
-size = Vector2(2, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o2qw5"]
-albedo_texture = ExtResource("47_lurs0")
-normal_enabled = true
-subsurf_scatter_enabled = true
-subsurf_scatter_skin_mode = true
-subsurf_scatter_texture = ExtResource("47_lurs0")
-
 [node name="HABITACIÓN 313" type="Node3D"]
 
 [node name="COLISION SOLARIUM" type="CSGBox3D" parent="."]
@@ -550,6 +550,26 @@ operation = 2
 use_collision = true
 size = Vector3(2.97501, 3.08036, 0.002)
 material = SubResource("StandardMaterial3D_xa0vh")
+
+[node name="FONDO NEGRO" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.3921, 0, -8.61077)
+mesh = SubResource("PlaneMesh_6lksr")
+surface_material_override/0 = SubResource("StandardMaterial3D_y5ymr")
+
+[node name="FONDO NEGRO" type="MeshInstance3D" parent="FONDO NEGRO"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 4.37114e-08, 1, -2.45931, 0, -8.61077)
+mesh = SubResource("PlaneMesh_6lksr")
+surface_material_override/0 = SubResource("StandardMaterial3D_y5ymr")
+
+[node name="FONDO NEGRO" type="MeshInstance3D" parent="FONDO NEGRO/FONDO NEGRO"]
+transform = Transform3D(-1, 8.74228e-08, -1.03895e-14, -8.74228e-08, -1, 8.74228e-08, -3.28406e-15, 8.74228e-08, 1, -1.19197, 16.2323, -8.61077)
+mesh = SubResource("PlaneMesh_6lksr")
+surface_material_override/0 = SubResource("StandardMaterial3D_y5ymr")
+
+[node name="FONDO NEGRO" type="MeshInstance3D" parent="FONDO NEGRO/FONDO NEGRO/FONDO NEGRO"]
+transform = Transform3D(-1, 2.18557e-07, -1.31134e-07, 1.31134e-07, -4.37114e-08, -1, -2.18557e-07, -1, 4.37114e-08, -1.19197, 16.2323, 21.1311)
+mesh = SubResource("PlaneMesh_6lksr")
+surface_material_override/0 = SubResource("StandardMaterial3D_y5ymr")
 
 [node name="COLLISION DEL BAÑO" type="CSGBox3D" parent="."]
 transform = Transform3D(0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 1.98032, 3.91557, 1.00567, 2.61265)
@@ -1001,6 +1021,61 @@ height = 0.0713452
 sides = 10
 material = SubResource("StandardMaterial3D_c45a6")
 
+[node name="SILLA" type="CSGCylinder3D" parent="Muebles"]
+transform = Transform3D(0.693615, -1.55035e-07, 0.720345, 2.23517e-07, 0.999999, 2.04196e-14, -0.720345, 1.6101e-07, 0.693616, 0.0653061, 0.489995, 3.19239)
+radius = 0.187373
+height = 0.0476833
+sides = 30
+material = SubResource("StandardMaterial3D_3wl6n")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Muebles/SILLA"]
+transform = Transform3D(0.779294, -0.0217234, -0.626281, 0.616096, -0.156162, 0.772037, -0.114573, -0.987493, -0.108313, -0.03406, 0.33946, -0.142435)
+radius = 0.171636
+height = 0.0280014
+sides = 10
+material = SubResource("StandardMaterial3D_c45a6")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Muebles/SILLA"]
+transform = Transform3D(1, 1.27898e-13, 0, -7.10543e-14, 1, 0, 2.98023e-08, 0, 1, 0.0717719, -0.0406185, -0.167324)
+radius = 0.0309426
+height = 0.829127
+sides = 10
+material = SubResource("StandardMaterial3D_46yhk")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="Muebles/SILLA"]
+transform = Transform3D(1, 4.26326e-14, 0, -4.26326e-14, 1, 0, 2.98023e-08, 0, 1, 0, -0.0285485, 0)
+radius = 0.200259
+height = 0.0713452
+sides = 10
+material = SubResource("StandardMaterial3D_c45a6")
+
+[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="Muebles/SILLA"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.105907, -0.220738, 0.115031)
+radius = 0.0309426
+height = 0.485602
+sides = 10
+material = SubResource("StandardMaterial3D_46yhk")
+
+[node name="CSGCylinder3D6" type="CSGCylinder3D" parent="Muebles/SILLA"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.105315, -0.220738, 0.115031)
+radius = 0.0309426
+height = 0.485602
+sides = 10
+material = SubResource("StandardMaterial3D_46yhk")
+
+[node name="CSGCylinder3D7" type="CSGCylinder3D" parent="Muebles/SILLA"]
+transform = Transform3D(1, 1.42109e-13, 0, -2.98428e-13, 1, 0, 2.98023e-08, -7.10543e-15, 1, -0.126539, -0.0406185, -0.16728)
+radius = 0.0309426
+height = 0.829127
+sides = 10
+material = SubResource("StandardMaterial3D_46yhk")
+
+[node name="ALFOMBRA" type="MeshInstance3D" parent="Muebles"]
+transform = Transform3D(0.999935, 0, 0.0114143, 0, 1, 0, -0.0114143, 0, 0.999935, 2.70279, 0.0246284, 5.32679)
+mesh = SubResource("PlaneMesh_7beli")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_o2qw5")
+
 [node name="Luces" type="Node3D" parent="."]
 
 [node name="OSCURIDAD" type="OmniLight3D" parent="Luces"]
@@ -1318,77 +1393,3 @@ visible = false
 
 [node name="Piano" parent="." instance=ExtResource("39_7f7sf")]
 visible = false
-
-[node name="SILLA" type="CSGCylinder3D" parent="."]
-transform = Transform3D(0.693615, -1.55035e-07, 0.720345, 2.23517e-07, 0.999999, 2.04196e-14, -0.720345, 1.6101e-07, 0.693616, 0.0653061, 0.489995, 3.19239)
-radius = 0.187373
-height = 0.0476833
-sides = 30
-material = SubResource("StandardMaterial3D_3wl6n")
-
-[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="SILLA"]
-transform = Transform3D(0.779294, -0.0217234, -0.626281, 0.616096, -0.156162, 0.772037, -0.114573, -0.987493, -0.108313, -0.03406, 0.33946, -0.142435)
-radius = 0.171636
-height = 0.0280014
-sides = 10
-material = SubResource("StandardMaterial3D_c45a6")
-
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="SILLA"]
-transform = Transform3D(1, 1.27898e-13, 0, -7.10543e-14, 1, 0, 2.98023e-08, 0, 1, 0.0717719, -0.0406185, -0.167324)
-radius = 0.0309426
-height = 0.829127
-sides = 10
-material = SubResource("StandardMaterial3D_46yhk")
-
-[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="SILLA"]
-transform = Transform3D(1, 4.26326e-14, 0, -4.26326e-14, 1, 0, 2.98023e-08, 0, 1, 0, -0.0285485, 0)
-radius = 0.200259
-height = 0.0713452
-sides = 10
-material = SubResource("StandardMaterial3D_c45a6")
-
-[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="SILLA"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.105907, -0.220738, 0.115031)
-radius = 0.0309426
-height = 0.485602
-sides = 10
-material = SubResource("StandardMaterial3D_46yhk")
-
-[node name="CSGCylinder3D6" type="CSGCylinder3D" parent="SILLA"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.105315, -0.220738, 0.115031)
-radius = 0.0309426
-height = 0.485602
-sides = 10
-material = SubResource("StandardMaterial3D_46yhk")
-
-[node name="CSGCylinder3D7" type="CSGCylinder3D" parent="SILLA"]
-transform = Transform3D(1, 1.42109e-13, 0, -2.98428e-13, 1, 0, 2.98023e-08, -7.10543e-15, 1, -0.126539, -0.0406185, -0.16728)
-radius = 0.0309426
-height = 0.829127
-sides = 10
-material = SubResource("StandardMaterial3D_46yhk")
-
-[node name="FONDO NEGRO" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 11.3921, 0, -8.61077)
-mesh = SubResource("PlaneMesh_6lksr")
-surface_material_override/0 = SubResource("StandardMaterial3D_y5ymr")
-
-[node name="FONDO NEGRO" type="MeshInstance3D" parent="FONDO NEGRO"]
-transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 4.37114e-08, 1, -2.45931, 0, -8.61077)
-mesh = SubResource("PlaneMesh_6lksr")
-surface_material_override/0 = SubResource("StandardMaterial3D_y5ymr")
-
-[node name="FONDO NEGRO" type="MeshInstance3D" parent="FONDO NEGRO/FONDO NEGRO"]
-transform = Transform3D(-1, 8.74228e-08, -1.03895e-14, -8.74228e-08, -1, 8.74228e-08, -3.28406e-15, 8.74228e-08, 1, -1.19197, 16.2323, -8.61077)
-mesh = SubResource("PlaneMesh_6lksr")
-surface_material_override/0 = SubResource("StandardMaterial3D_y5ymr")
-
-[node name="FONDO NEGRO" type="MeshInstance3D" parent="FONDO NEGRO/FONDO NEGRO/FONDO NEGRO"]
-transform = Transform3D(-1, 2.18557e-07, -1.31134e-07, 1.31134e-07, -4.37114e-08, -1, -2.18557e-07, -1, 4.37114e-08, -1.19197, 16.2323, 21.1311)
-mesh = SubResource("PlaneMesh_6lksr")
-surface_material_override/0 = SubResource("StandardMaterial3D_y5ymr")
-
-[node name="ALFOMBRA" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.999935, 0, 0.0114143, 0, 1, 0, -0.0114143, 0, 0.999935, 2.70279, 0.0246284, 5.32679)
-mesh = SubResource("PlaneMesh_7beli")
-surface_material_override/0 = SubResource("StandardMaterial3D_o2qw5")
