@@ -15,6 +15,10 @@ run/main_scene="res://scenes/menu.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GLOBAL="*res://scripts/Global.gd"
+
 [display]
 
 window/stretch/mode="canvas_items"
