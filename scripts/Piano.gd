@@ -2,7 +2,6 @@ extends Control
 var last_button= ""
 var contador=0
 
-
 func _on_button_7_pressed():
 	$Button7/AudioStreamPlayer2D.play()
 	contador=0 
