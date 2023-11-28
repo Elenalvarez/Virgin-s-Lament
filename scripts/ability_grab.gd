@@ -26,12 +26,14 @@ func _process(delta):
 		#PULSAR INTERRUPTOR
 		if prompt.text == "Switch" and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 			cambiar_switch()
+			await get_tree().create_timer(2).timeout
 		
 		#PULSAR CAJÓN SUP DCHA
 		if prompt.text == "Top right drawer" and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 			var cajon = get_parent().get_parent().get_parent().get_parent().get_node("CajonSupDcha")
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			cajon.visible = true
+Elena15nov
 			
 		#PULSAR EL PIANO
 		if prompt.text == "Piano" and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
@@ -39,6 +41,12 @@ func _process(delta):
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			piano.visible = true
 	
+
+		if prompt.text == "Piano" and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+			var piano = get_parent().get_parent().get_parent().get_parent().get_node("Piano")
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			piano.visible=true
+main
 	if Input.is_key_pressed(KEY_E):
 		if can_use:
 			can_use = false
