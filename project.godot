@@ -17,11 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-<<<<<<< HEAD
-Corazon="*res://corazon.gd"
-=======
 GLOBAL="*res://scripts/Global.gd"
->>>>>>> a7a11d6f81510be220324657a2a4db131fec0398
 
 [display]
 
