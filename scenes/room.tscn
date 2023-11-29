@@ -1,4 +1,4 @@
-[gd_scene load_steps=168 format=3 uid="uid://bo56ausmm078f"]
+[gd_scene load_steps=169 format=3 uid="uid://bo56ausmm078f"]
 
 [ext_resource type="PackedScene" uid="uid://qp83kfxevoyc" path="res://scenes/player.tscn" id="1_wkk4h"]
 [ext_resource type="Texture2D" uid="uid://ctxe3ch88jtpo" path="res://assets/textures/TEXTURAS FOTOREALISTAS/double_brick_floor_diff_4k.png" id="2_7ufki"]
@@ -50,6 +50,7 @@
 [ext_resource type="PackedScene" uid="uid://butakrhcfh4lo" path="res://scenes/Piano.tscn" id="39_7f7sf"]
 [ext_resource type="Texture2D" uid="uid://chkt3mp3abhmo" path="res://assets/textures/NUEVAS TEXTURAS/Leather011_1K-JPG/Leather011_1K-JPG_NormalGL.jpg" id="44_t2eae"]
 [ext_resource type="Texture2D" uid="uid://daq16ak1un02b" path="res://assets/textures/NUEVAS TEXTURAS/pattern-7179697_1920.jpg" id="47_lurs0"]
+[ext_resource type="PackedScene" uid="uid://cwvqeoulq6ucs" path="res://scenes/bascula.tscn" id="51_6pubp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xa0vh"]
 transparency = 1
@@ -1466,4 +1467,7 @@ material = SubResource("StandardMaterial3D_w4bj2")
 visible = false
 
 [node name="Piano" parent="." instance=ExtResource("39_7f7sf")]
+visible = false
+
+[node name="Bascula" parent="." instance=ExtResource("51_6pubp")]
 visible = false

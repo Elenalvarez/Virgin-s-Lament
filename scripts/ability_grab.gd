@@ -38,6 +38,12 @@ func _process(delta):
 			var piano = get_parent().get_parent().get_parent().get_parent().get_node("Piano")
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			piano.visible = true
+		
+		#PULSAR BASCULA
+		if prompt.text == "Weighing machine" and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and !GLOBAL.bascula:
+			var bascula = get_parent().get_parent().get_parent().get_parent().get_node("Bascula")
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			bascula.visible = true
 	
 	if Input.is_key_pressed(KEY_E):
 		if can_use:
