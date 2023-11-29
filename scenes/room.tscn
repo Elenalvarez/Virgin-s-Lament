@@ -1,4 +1,4 @@
-[gd_scene load_steps=169 format=3 uid="uid://bo56ausmm078f"]
+[gd_scene load_steps=187 format=3 uid="uid://bo56ausmm078f"]
 
 [ext_resource type="PackedScene" uid="uid://qp83kfxevoyc" path="res://scenes/player.tscn" id="1_wkk4h"]
 [ext_resource type="Texture2D" uid="uid://ctxe3ch88jtpo" path="res://assets/textures/TEXTURAS FOTOREALISTAS/double_brick_floor_diff_4k.png" id="2_7ufki"]
@@ -46,11 +46,17 @@
 [ext_resource type="Texture2D" uid="uid://dmi45frp76lhf" path="res://assets/textures/NUEVAS TEXTURAS/Metal041A_1K-JPG/Metal041A_1K-JPG_Color.jpg" id="29_1govt"]
 [ext_resource type="Texture2D" uid="uid://cs7hwvgv5gebn" path="res://assets/textures/NUEVAS TEXTURAS/Metal041A_1K-JPG/Metal041A_1K-JPG_Metalness.jpg" id="30_7wegv"]
 [ext_resource type="Script" path="res://scripts/interactuable.gd" id="32_e5qnr"]
+[ext_resource type="Texture2D" uid="uid://cnm3u4pth3w" path="res://assets/textures/NUEVAS TEXTURAS/Wood020_1K-JPG/Wood020_1K-JPG_NormalGL.jpg" id="33_7weev"]
 [ext_resource type="PackedScene" uid="uid://bvoi6w4wjmivu" path="res://scenes/cajon_sup_dcha.tscn" id="38_kuygc"]
 [ext_resource type="PackedScene" uid="uid://butakrhcfh4lo" path="res://scenes/Piano.tscn" id="39_7f7sf"]
+[ext_resource type="Texture2D" path="res://assets/imagenes/micrsocopio.png" id="41_w77f3"]
 [ext_resource type="Texture2D" uid="uid://chkt3mp3abhmo" path="res://assets/textures/NUEVAS TEXTURAS/Leather011_1K-JPG/Leather011_1K-JPG_NormalGL.jpg" id="44_t2eae"]
 [ext_resource type="Texture2D" uid="uid://daq16ak1un02b" path="res://assets/textures/NUEVAS TEXTURAS/pattern-7179697_1920.jpg" id="47_lurs0"]
 [ext_resource type="PackedScene" uid="uid://cwvqeoulq6ucs" path="res://scenes/bascula.tscn" id="51_6pubp"]
+[ext_resource type="AudioStream" uid="uid://b0ssog2ns5yva" path="res://assets/music/EFECTOS SONIDO/distant-ambulance-siren-6108.mp3" id="53_c8i7e"]
+[ext_resource type="AudioStream" uid="uid://cpghe7ystl52p" path="res://assets/music/EFECTOS SONIDO/gewitter-blitz-donner-regen-wind-167203.mp3" id="54_711hu"]
+[ext_resource type="AudioStream" uid="uid://b7ekwuwovl86d" path="res://assets/music/EFECTOS SONIDO/fireplace-with-crackling-sounds-2-min-rk-178392.mp3" id="55_furo5"]
+[ext_resource type="AudioStream" uid="uid://djb8kgf4wy3h4" path="res://assets/music/Mother worries.mp3" id="56_27bj2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xa0vh"]
 transparency = 1
@@ -393,11 +399,22 @@ size = Vector2(1.137, 0.85)
 transparency = 1
 albedo_texture = ExtResource("28_cx6o0")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8c3ts"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hr6lq"]
 albedo_texture = ExtResource("26_gom3s")
 normal_enabled = true
-normal_texture = ExtResource("27_wk25n")
-uv1_scale = Vector3(2, 2, 2)
+normal_texture = ExtResource("33_7weev")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7c1jf"]
+albedo_texture = ExtResource("26_gom3s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_78l62"]
+albedo_texture = ExtResource("26_gom3s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qyyny"]
+albedo_texture = ExtResource("26_gom3s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o1eru"]
+albedo_texture = ExtResource("26_gom3s")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_61uyj"]
 size = Vector2(0.3, 0.25)
@@ -410,6 +427,23 @@ size = Vector2(0.3, 0.25)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_12qtb"]
 albedo_texture = ExtResource("28_bdcat")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nar00"]
+albedo_texture = ExtResource("26_gom3s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g7u7w"]
+albedo_texture = ExtResource("26_gom3s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k7e1k"]
+albedo_texture = ExtResource("26_gom3s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7lqr7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_epr87"]
+albedo_texture = ExtResource("26_gom3s")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_lgdi8"]
+size = Vector2(0.3, 0.5)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_wrnw0"]
 size = Vector2(0.305, 1.524)
@@ -446,11 +480,23 @@ subsurf_scatter_texture = ExtResource("47_lurs0")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ab4sa"]
 albedo_texture = ExtResource("29_1govt")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8c3ts"]
+albedo_texture = ExtResource("26_gom3s")
+normal_enabled = true
+normal_texture = ExtResource("27_wk25n")
+uv1_scale = Vector3(2, 2, 2)
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_1hsuj"]
 size = Vector2(0.08, 0.4)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_qvode"]
 size = Vector2(0.37, 0.48)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n162h"]
+transparency = 2
+alpha_scissor_threshold = 0.707
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("41_w77f3")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ncp8j"]
 albedo_color = Color(0.192157, 0.192157, 0.192157, 1)
@@ -897,8 +943,8 @@ sides = 10
 material = SubResource("StandardMaterial3D_j72d8")
 
 [node name="tabla de cortar" type="CSGBox3D" parent="Muebles/mesa comedor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.90735e-06, 0.0548198, -0.400582)
-size = Vector3(0.22, 0.05, 0.6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38419e-06, 0.0367562, -0.400582)
+size = Vector3(0.22, 0.0203901, 0.6)
 material = SubResource("StandardMaterial3D_6asow")
 
 [node name="SILLÍN" type="CSGCylinder3D" parent="Muebles"]
@@ -990,29 +1036,33 @@ size = Vector3(0.2967, 0.198355, 0.718055)
 
 [node name="BUREAU MICROSCOP" type="CSGBox3D" parent="Muebles"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.450827, 0.9, 3.984)
-material_override = SubResource("StandardMaterial3D_8c3ts")
 use_collision = true
 size = Vector3(0.7, 0.0690031, 2.01392)
+material = SubResource("StandardMaterial3D_hr6lq")
 
 [node name="PATA" type="CSGCylinder3D" parent="Muebles/BUREAU MICROSCOP"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.43051e-06, -0.644017, -0.672401)
 radius = 0.05
 height = 0.470895
 sides = 10
+material = SubResource("StandardMaterial3D_7c1jf")
 
 [node name="PATA2" type="CSGCylinder3D" parent="Muebles/BUREAU MICROSCOP"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.43051e-06, -0.644017, 0.620149)
 radius = 0.05
 height = 0.470895
 sides = 10
+material = SubResource("StandardMaterial3D_78l62")
 
 [node name="CAJONERA1" type="CSGBox3D" parent="Muebles/BUREAU MICROSCOP"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0735157, -0.345801, 0.63395)
 size = Vector3(0.5, 0.571503, 0.424306)
+material = SubResource("StandardMaterial3D_qyyny")
 
 [node name="CAJONERA2" type="CSGBox3D" parent="Muebles/BUREAU MICROSCOP"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0735157, -0.345801, -0.657656)
 size = Vector3(0.5, 0.571503, 0.424306)
+material = SubResource("StandardMaterial3D_o1eru")
 
 [node name="TEXTURA CAJON" type="MeshInstance3D" parent="Muebles/BUREAU MICROSCOP"]
 transform = Transform3D(8.74228e-08, 1, -8.74228e-08, 3.55271e-15, -8.74228e-08, -1, -1, 8.74228e-08, -1.09268e-14, 0.260954, -0.167446, -0.650847)
@@ -1039,12 +1089,53 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.263321, -0.644017, -0.6724
 radius = 0.05
 height = 0.470895
 sides = 10
+material = SubResource("StandardMaterial3D_nar00")
 
 [node name="PATA4" type="CSGCylinder3D" parent="Muebles/BUREAU MICROSCOP"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.263321, -0.644017, 0.620149)
 radius = 0.05
 height = 0.470895
 sides = 10
+material = SubResource("StandardMaterial3D_g7u7w")
+
+[node name="ESTANTE 1" type="CSGBox3D" parent="Muebles/BUREAU MICROSCOP"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.264614, 0.464006, 0.490424)
+size = Vector3(0.30062, 0.0391848, 1)
+material = SubResource("StandardMaterial3D_k7e1k")
+
+[node name="LIBRO" type="CSGBox3D" parent="Muebles/BUREAU MICROSCOP/ESTANTE 1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.168407, 0.253304)
+size = Vector3(0.188135, 0.308633, 0.341865)
+material = SubResource("StandardMaterial3D_7lqr7")
+
+[node name="LIBRO2" type="CSGBox3D" parent="Muebles/BUREAU MICROSCOP/ESTANTE 1"]
+transform = Transform3D(1, 2.07526e-08, 5.24043e-09, -2.07526e-08, 0.880113, 0.474764, 5.24042e-09, -0.474764, 0.880113, 0, 0.268384, -0.35891)
+size = Vector3(0.188135, 0.514542, 0.0914944)
+
+[node name="LIBRO3" type="CSGBox3D" parent="Muebles/BUREAU MICROSCOP/ESTANTE 1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0328417, 0.237197, 0.00258458)
+size = Vector3(0.188135, 0.444234, 0.120871)
+
+[node name="LIBRO4" type="CSGBox3D" parent="Muebles/BUREAU MICROSCOP/ESTANTE 1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0328417, 0.263094, -0.133015)
+size = Vector3(0.188135, 0.515667, 0.120871)
+
+[node name="ESTANTE 2" type="CSGBox3D" parent="Muebles/BUREAU MICROSCOP"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.264614, 0.821107, -0.478736)
+size = Vector3(0.30062, 0.0391848, 1)
+material = SubResource("StandardMaterial3D_epr87")
+
+[node name="LIBRO3" type="CSGBox3D" parent="Muebles/BUREAU MICROSCOP/ESTANTE 2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0328417, 0.237197, 0.35976)
+size = Vector3(0.188135, 0.444234, 0.120871)
+
+[node name="LIBRO4" type="CSGBox3D" parent="Muebles/BUREAU MICROSCOP/ESTANTE 2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0328417, 0.237197, 0.213917)
+size = Vector3(0.188135, 0.444234, 0.120871)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Muebles/BUREAU MICROSCOP"]
+transform = Transform3D(-8.74228e-08, 1, 4.37114e-08, -4.37114e-08, -4.37114e-08, 1, 1, 8.74228e-08, 4.37114e-08, 0.144575, 0.321537, 0.472572)
+mesh = SubResource("PlaneMesh_lgdi8")
 
 [node name="PIANO" type="MeshInstance3D" parent="Muebles"]
 transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, -2.16724, 0.75, 2.52073)
@@ -1215,6 +1306,18 @@ shadow_transmittance_bias = 3.839
 shadow_blur = 0.855
 directional_shadow_mode = 1
 
+[node name="CHIMENEA" type="OmniLight3D" parent="Luces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.69021, 0.591852, -1.70862)
+light_color = Color(1, 0.482353, 0.239216, 1)
+light_energy = 1.444
+light_indirect_energy = 0.644
+light_size = 0.311
+
+[node name="FLEXO" type="SpotLight3D" parent="Luces"]
+transform = Transform3D(0.786177, 0.522019, 0.330789, -0.308771, -0.131869, 0.941951, 0.535337, -0.842678, 0.0575117, 0.883385, 1.49012, 3.79648)
+light_color = Color(1, 1, 0.717647, 1)
+spot_range = 0.863904
+
 [node name="Objetos interactuables" type="Node3D" parent="."]
 
 [node name="Weighing machine" type="CSGBox3D" parent="Objetos interactuables"]
@@ -1259,7 +1362,7 @@ size = Vector3(0.3, 0.25, 0.6)
 script = ExtResource("32_e5qnr")
 
 [node name="Pescao" type="MeshInstance3D" parent="Objetos interactuables"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.83481, 0.796498, -1.12908)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.83481, 0.751519, -1.12908)
 mesh = SubResource("PlaneMesh_1hsuj")
 skeleton = NodePath("../../Muebles/mesa comedor/tabla de cortar")
 
@@ -1274,9 +1377,10 @@ transform = Transform3D(0.992388, 0.123151, 0, -0.123151, 0.992388, 0, 0, 0, 1, 
 size = Vector3(0.01, 0.055, 0.055)
 
 [node name="microscopio" type="MeshInstance3D" parent="Objetos interactuables"]
-transform = Transform3D(-4.37114e-08, 0, 1, -1, -4.37114e-08, -4.37114e-08, 4.37114e-08, -1, 0, 0.450827, 1.10229, 3.88502)
+transform = Transform3D(-1, -4.37114e-08, -8.74228e-08, 8.74228e-08, 1.91069e-15, -1, 4.37114e-08, -1, 0, -0.0816912, 1.1769, 4.08295)
 mesh = SubResource("PlaneMesh_qvode")
 skeleton = NodePath("../../Muebles/BUREAU MICROSCOP")
+surface_material_override/0 = SubResource("StandardMaterial3D_n162h")
 
 [node name="Player" parent="." instance=ExtResource("1_wkk4h")]
 transform = Transform3D(-0.097635, 0, -0.995222, 0, 1, 0, 0.995222, 0, -0.097635, -0.4741, 1.00287, 5.32757)
@@ -1300,6 +1404,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.711479, 0)
 
 [node name="CHIMENEA BASE2" type="CSGCombiner3D" parent="CHIMENEA CON ESCALONES"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.863294, 6.12473, 2.839)
+use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CHIMENEA CON ESCALONES/CHIMENEA BASE2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -4.98712, -4.5649)
@@ -1359,6 +1464,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_pl1jy")
 
 [node name="CHIMENEA BASE" type="CSGCombiner3D" parent="CHIMENEA CON ESCALONES"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.827842, 5.70473, 2.83863)
+use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CHIMENEA CON ESCALONES/CHIMENEA BASE"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.04267, -4.95, -4.565)
@@ -1374,6 +1480,7 @@ material = SubResource("StandardMaterial3D_4iiu3")
 [node name="CHIMENEA BASE3" type="CSGCombiner3D" parent="CHIMENEA CON ESCALONES"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.828, 6.73773, 2.839)
 operation = 1
+use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CHIMENEA CON ESCALONES/CHIMENEA BASE3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02948, -5, -4.5649)
@@ -1388,11 +1495,13 @@ material = SubResource("StandardMaterial3D_01aac")
 
 [node name="CONDUTCO" type="CSGBox3D" parent="CHIMENEA CON ESCALONES"]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1.38228, 0, 0.707107, 0, 0.707107, -2.22289, 11.9083, -2.0506)
+use_collision = true
 size = Vector3(0.6, 12.4629, 0.6)
 material = SubResource("StandardMaterial3D_22vxa")
 
 [node name="CSGCombiner3D3" type="CSGCombiner3D" parent="CHIMENEA CON ESCALONES"]
 transform = Transform3D(1, 0, 0, 0, 1.38228, 0, 0, 0, 1, 0.139185, 0.279645, 0.146917)
+use_collision = true
 
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="CHIMENEA CON ESCALONES/CSGCombiner3D3"]
 transform = Transform3D(0.937846, 0, 0.937846, 0, 1.30837, 0, -0.937846, 0, 0.937846, -2.37846, 1.07639, -1.27907)
@@ -1471,3 +1580,28 @@ visible = false
 
 [node name="Bascula" parent="." instance=ExtResource("51_6pubp")]
 visible = false
+
+[node name="SI RE NA" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.93627, 0, -5.51275)
+stream = ExtResource("53_c8i7e")
+volume_db = -30.107
+autoplay = true
+doppler_tracking = 2
+
+[node name="STORMY" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27217, 1.40707, -3.43843)
+stream = ExtResource("54_711hu")
+volume_db = -13.764
+autoplay = true
+
+[node name="FUEGORL" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.79923, 0.645322, -1.67535)
+stream = ExtResource("55_furo5")
+volume_db = -12.043
+pitch_scale = 0.98
+autoplay = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("56_27bj2")
+volume_db = 5.592
+autoplay = true
