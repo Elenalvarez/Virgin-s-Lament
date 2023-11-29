@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://i4jkrt6wiecf"]
+[gd_scene load_steps=4 format=3 uid="uid://bvoi6w4wjmivu"]
 
 [ext_resource type="Script" path="res://scripts/cajon_sup_dcha.gd" id="1_w5h0p"]
 [ext_resource type="Texture2D" uid="uid://ldm05w7whxsx" path="res://assets/imagenes/cajon1.png" id="2_hq7hn"]
