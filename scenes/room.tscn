@@ -1,4 +1,4 @@
-[gd_scene load_steps=157 format=3 uid="uid://bo56ausmm078f"]
+[gd_scene load_steps=168 format=3 uid="uid://bo56ausmm078f"]
 
 [ext_resource type="PackedScene" uid="uid://qp83kfxevoyc" path="res://scenes/player.tscn" id="1_wkk4h"]
 [ext_resource type="Texture2D" uid="uid://ctxe3ch88jtpo" path="res://assets/textures/TEXTURAS FOTOREALISTAS/double_brick_floor_diff_4k.png" id="2_7ufki"]
@@ -29,8 +29,11 @@
 [ext_resource type="Texture2D" uid="uid://cl4roc4icp82t" path="res://assets/textures/NUEVAS TEXTURAS/telescopio.png" id="18_t3efw"]
 [ext_resource type="Texture2D" uid="uid://2arqfx2gdkk5" path="res://assets/imagenes/VISTA DE VENTANA DESENFOCADA2.0.png" id="20_6wf58"]
 [ext_resource type="Texture2D" uid="uid://ok6l21q8fb1u" path="res://assets/imagenes/BÁSCULA.png" id="22_y6u66"]
+[ext_resource type="Texture2D" uid="uid://dtoqluj76r6j2" path="res://assets/imagenes/COCINA ALACENAS.png" id="22_ybskt"]
 [ext_resource type="Texture2D" uid="uid://c6uelsgyy2bd4" path="res://assets/textures/NUEVAS TEXTURAS/Wood035_1K-JPG/Wood035_1K-JPG_Color.jpg" id="23_cuvi0"]
 [ext_resource type="Texture2D" uid="uid://dpr01li1n2vkx" path="res://assets/textures/NUEVAS TEXTURAS/Wood034_1K-JPG/Wood034_1K-JPG_Color.jpg" id="24_w2cpq"]
+[ext_resource type="Texture2D" uid="uid://b768bxymvkxgf" path="res://assets/imagenes/COCINA FOGÓN.png" id="25_di437"]
+[ext_resource type="Texture2D" uid="uid://ctwo33mxp1pth" path="res://assets/imagenes/COCINA CAJONES.png" id="26_bvll0"]
 [ext_resource type="Texture2D" uid="uid://snys1qnmb4c8" path="res://assets/textures/NUEVAS TEXTURAS/Wood020_1K-JPG/Wood020_1K-JPG_Color.jpg" id="26_gom3s"]
 [ext_resource type="Texture2D" uid="uid://ldm05w7whxsx" path="res://assets/imagenes/cajon1.png" id="27_1jd3a"]
 [ext_resource type="Texture2D" uid="uid://1wgqrum7ylkq" path="res://assets/textures/NUEVAS TEXTURAS/Leather011_1K-JPG/Leather011_1K-JPG_Color.jpg" id="27_dn5ff"]
@@ -288,6 +291,13 @@ albedo_texture = ExtResource("20_6wf58")
 albedo_texture = ExtResource("26_gom3s")
 uv1_scale = Vector3(2, 2, 2)
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_bpjse"]
+size = Vector2(3.437, 0.85)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jdf7c"]
+transparency = 1
+albedo_texture = ExtResource("22_ybskt")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uv12h"]
 albedo_texture = ExtResource("14_31wo4")
 uv1_triplanar = true
@@ -298,9 +308,33 @@ size = Vector2(0.3, 0.4)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sh6i1"]
 albedo_texture = ExtResource("22_y6u66")
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_ru80s"]
+size = Vector2(3.437, 0.89)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6myq5"]
+transparency = 1
+albedo_texture = ExtResource("25_di437")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ruf7"]
+albedo_texture = ExtResource("29_1govt")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_soo8y"]
+albedo_texture = ExtResource("29_1govt")
+metallic = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1npg0"]
+albedo_texture = ExtResource("29_1govt")
+
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_bsiwk"]
 albedo_texture = ExtResource("26_gom3s")
 uv1_scale = Vector3(2, 2, 2)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ruqxc"]
+size = Vector2(3.437, 0.764)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7qxux"]
+transparency = 1
+albedo_texture = ExtResource("26_bvll0")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4p3nn"]
 albedo_texture = ExtResource("26_gom3s")
@@ -357,9 +391,6 @@ size = Vector2(1.137, 0.85)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kq6em"]
 transparency = 1
 albedo_texture = ExtResource("28_cx6o0")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ruf7"]
-albedo_texture = ExtResource("29_1govt")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8c3ts"]
 albedo_texture = ExtResource("26_gom3s")
@@ -689,7 +720,7 @@ mesh = SubResource("PlaneMesh_h8do2")
 surface_material_override/0 = SubResource("StandardMaterial3D_0yjdl")
 
 [node name="FLOWEY 2" type="MeshInstance3D" parent="Superficies/SOLARIUM"]
-transform = Transform3D(-1, 1.74846e-07, -8.74232e-08, 1.74846e-07, 1, -8.74228e-08, 8.74228e-08, -8.74228e-08, -1, -0.869359, -2.76898, 1.47706)
+transform = Transform3D(-1, 1.74846e-07, -8.74232e-08, 1.74846e-07, 1, -8.74228e-08, 8.74228e-08, -8.74228e-08, -1, -0.609495, -2.76898, 1.47706)
 mesh = SubResource("PlaneMesh_b85wn")
 surface_material_override/0 = SubResource("StandardMaterial3D_icfd4")
 
@@ -793,6 +824,11 @@ use_collision = true
 size = Vector3(0.407584, 0.85, 3.43736)
 material = SubResource("StandardMaterial3D_4ehae")
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Muebles/MUEBLE ALTO 1"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -0.21368, 0, 0)
+mesh = SubResource("PlaneMesh_bpjse")
+surface_material_override/0 = SubResource("StandardMaterial3D_jdf7c")
+
 [node name="ENCIMERA" type="CSGBox3D" parent="Muebles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.16281, 0.806468, -0.643201)
 size = Vector3(0.890018, 0.0918116, 3.46498)
@@ -803,11 +839,48 @@ transform = Transform3D(0.794171, 0, -0.607695, 0, 1, 0, 0.607695, 0, 0.794171, 
 mesh = SubResource("PlaneMesh_vm28c")
 surface_material_override/0 = SubResource("StandardMaterial3D_sh6i1")
 
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Muebles/ENCIMERA"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.0820141, 0.0703125, 0.0530181)
+mesh = SubResource("PlaneMesh_ru80s")
+surface_material_override/0 = SubResource("StandardMaterial3D_6myq5")
+
+[node name="GRIFO" type="CSGBox3D" parent="Muebles/ENCIMERA"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.189855, 0.160794, -0.386872)
+size = Vector3(0.0519894, 0.293912, 0.0404713)
+material = SubResource("StandardMaterial3D_3ruf7")
+
+[node name="GRIFO2" type="CSGBox3D" parent="Muebles/ENCIMERA"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.137618, 0.251972, -0.386872)
+size = Vector3(0.0519894, 0.11802, 0.0404713)
+material = SubResource("StandardMaterial3D_3ruf7")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Muebles/ENCIMERA"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0588322, 0.0497274, -0.394228)
+size = Vector3(0.620072, 0.0650922, 0.813141)
+material = SubResource("StandardMaterial3D_soo8y")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Muebles/ENCIMERA"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0769053, 0.0546666, -0.386872)
+operation = 2
+size = Vector3(0.459878, 0.198355, 0.671107)
+material = SubResource("StandardMaterial3D_1npg0")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Muebles/ENCIMERA"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0859423, -0.0412041, -0.371403)
+operation = 2
+radius = 0.0472641
+height = 0.0753542
+
 [node name="ENCIMERA 2" type="CSGBox3D" parent="Muebles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.17513, 0.374439, -0.639889)
 use_collision = true
 size = Vector3(0.817302, 0.764242, 3.45959)
 material = SubResource("ORMMaterial3D_bsiwk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Muebles/ENCIMERA 2"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -0.413942, 0, 0)
+mesh = SubResource("PlaneMesh_ruqxc")
+surface_material_override/0 = SubResource("StandardMaterial3D_7qxux")
 
 [node name="mesa comedor" type="CSGBox3D" parent="Muebles"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.83481, 0.7, -1.52966)
@@ -1350,6 +1423,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_1bnfb")
 
 [node name="BUTACA" type="CSGBox3D" parent="CHIMENEA CON ESCALONES"]
 transform = Transform3D(-0.292923, 0, 0.956137, 0, 1, 0, -0.956137, 0, -0.292923, -1.86401, 0.956095, 0.195188)
+use_collision = true
 size = Vector3(0.692302, 0.440418, 0.633024)
 material = SubResource("StandardMaterial3D_ld7p8")
 
