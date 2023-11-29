@@ -1,19 +1,19 @@
-[gd_scene load_steps=10 format=3 uid="uid://ddkqp50umf67q"]
+[gd_scene load_steps=8 format=3 uid="uid://cwvqeoulq6ucs"]
 
 [ext_resource type="Script" path="res://scripts/bascula.gd" id="1_2p1gi"]
 [ext_resource type="Texture2D" uid="uid://dxh47le16aqr4" path="res://assets/textures/NUEVAS TEXTURAS/Granite001A_1K-JPG/Granite001A_1K-JPG_Color.jpg" id="2_td031"]
-[ext_resource type="Texture2D" uid="uid://cw5cldgpqdi2" path="res://30x20cm BÁSCULA.png" id="3_fsaxi"]
+[ext_resource type="Texture2D" uid="uid://cw5cldgpqdi2" path="res://assets/30x20cm BÁSCULA.png" id="3_fsaxi"]
 [ext_resource type="FontFile" uid="uid://wybwabqgfcjg" path="res://assets/fonts/DS-DIGI.TTF" id="4_1r220"]
-[ext_resource type="Texture2D" uid="uid://cutv7bquyj7ht" path="res://assets/mas_placeholder.png" id="5_w15u7"]
-[ext_resource type="Texture2D" uid="uid://dyru1pc2mjq53" path="res://assets/minus-sign-9.png" id="6_hu3d1"]
 [ext_resource type="Texture2D" uid="uid://bhtk3ndkpkbn7" path="res://assets/exit_gold.png" id="7_3mviw"]
-[ext_resource type="Texture2D" uid="uid://bq43en3h1ntn3" path="res://10x10cm CORAZON DE LA VIRGEN.png" id="8_okde6"]
+[ext_resource type="Texture2D" uid="uid://bq43en3h1ntn3" path="res://assets/10x10cm CORAZON DE LA VIRGEN.png" id="8_okde6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0tlax"]
 font = ExtResource("4_1r220")
 font_size = 75
 
-[node name="Bascula" type="Node2D"]
+[node name="Bascula" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_2p1gi")
 
 [node name="Granite001a1k-jpgColor" type="Sprite2D" parent="."]
@@ -37,30 +37,6 @@ label_settings = SubResource("LabelSettings_0tlax")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Mas" type="Button" parent="."]
-offset_left = 375.0
-offset_top = 513.0
-offset_right = 414.0
-offset_bottom = 556.0
-flat = true
-
-[node name="MasPlaceholder" type="Sprite2D" parent="Mas"]
-position = Vector2(19, 22)
-scale = Vector2(0.119531, 0.119531)
-texture = ExtResource("5_w15u7")
-
-[node name="Menos" type="Button" parent="."]
-offset_left = 741.0
-offset_top = 516.0
-offset_right = 780.0
-offset_bottom = 546.0
-flat = true
-
-[node name="Minus-sign-9" type="Sprite2D" parent="Menos"]
-position = Vector2(19.0001, 14.0001)
-scale = Vector2(0.144531, 0.144531)
-texture = ExtResource("6_hu3d1")
-
 [node name="Salida" type="Button" parent="."]
 offset_left = 1035.0
 offset_top = 5.0
@@ -79,6 +55,4 @@ position = Vector2(578, 217)
 scale = Vector2(0.201947, 0.201947)
 texture = ExtResource("8_okde6")
 
-[connection signal="pressed" from="Mas" to="." method="_on_mas_pressed"]
-[connection signal="pressed" from="Menos" to="." method="_on_menos_pressed"]
 [connection signal="pressed" from="Salida" to="." method="_on_salida_pressed"]
