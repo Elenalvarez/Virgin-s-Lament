@@ -1,0 +1,179 @@
+[gd_scene load_steps=9 format=3 uid="uid://cyr3j2skr08of"]
+
+[ext_resource type="Script" path="res://scripts/cajon_inf_iz.gd" id="1_8bmyc"]
+[ext_resource type="Texture2D" uid="uid://httitx8jdnor" path="res://assets/imagenes/CAJONERAgenerica.png" id="2_kd7e2"]
+[ext_resource type="Texture2D" uid="uid://bhtk3ndkpkbn7" path="res://assets/exit_gold.png" id="3_du2np"]
+[ext_resource type="FontFile" uid="uid://bq6gtmqupxaxq" path="res://assets/fonts/Cinzel-VariableFont_wght.ttf" id="4_rq8ha"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qfkam"]
+bg_color = Color(0.329412, 0.25098, 0.109804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_05bog"]
+bg_color = Color(0.623529, 0.482353, 0.286275, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xxsmf"]
+bg_color = Color(0.329412, 0.25098, 0.109804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y6eit"]
+bg_color = Color(0.623529, 0.482353, 0.286275, 1)
+
+[node name="CajonSupIz" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8bmyc")
+
+[node name="bandas" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -30.0
+offset_top = -47.0
+offset_right = 1228.0
+offset_bottom = 711.0
+color = Color(0.117647, 0.117647, 0.117647, 1)
+
+[node name="Cajon1" type="Sprite2D" parent="."]
+position = Vector2(585, 325)
+scale = Vector2(0.22, 0.22)
+texture = ExtResource("2_kd7e2")
+
+[node name="ExitGold" type="Sprite2D" parent="."]
+position = Vector2(1118, 32)
+scale = Vector2(2.30556, 2.30556)
+texture = ExtResource("3_du2np")
+
+[node name="Numeros" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 400.0
+offset_top = 94.0
+offset_right = 779.0
+offset_bottom = 197.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="ColorRect1" type="ColorRect" parent="Numeros"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.133333, 0.133333, 0.133333, 1)
+
+[node name="Label1" type="Label" parent="Numeros/ColorRect1"]
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 104.0
+theme_override_fonts/font = ExtResource("4_rq8ha")
+theme_override_font_sizes/font_size = 74
+text = "0
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ColorRect2" type="ColorRect" parent="Numeros"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.133333, 0.133333, 0.133333, 1)
+
+[node name="Label2" type="Label" parent="Numeros/ColorRect2"]
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 104.0
+theme_override_fonts/font = ExtResource("4_rq8ha")
+theme_override_font_sizes/font_size = 74
+text = "0
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ColorRect3" type="ColorRect" parent="Numeros"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.133333, 0.133333, 0.133333, 1)
+
+[node name="Label3" type="Label" parent="Numeros/ColorRect3"]
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 104.0
+theme_override_fonts/font = ExtResource("4_rq8ha")
+theme_override_font_sizes/font_size = 74
+text = "0
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ColorRect4" type="ColorRect" parent="Numeros"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.133333, 0.133333, 0.133333, 1)
+
+[node name="Label4" type="Label" parent="Numeros/ColorRect4"]
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 104.0
+theme_override_fonts/font = ExtResource("4_rq8ha")
+theme_override_font_sizes/font_size = 74
+text = "0
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="abajo" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 423.0
+offset_top = 208.0
+offset_right = 754.0
+offset_bottom = 248.0
+theme_override_constants/separation = 50
+
+[node name="Button1" type="Button" parent="abajo"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_qfkam")
+theme_override_styles/hover = SubResource("StyleBoxFlat_05bog")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xxsmf")
+
+[node name="Button2" type="Button" parent="abajo"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_qfkam")
+theme_override_styles/hover = SubResource("StyleBoxFlat_05bog")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_y6eit")
+
+[node name="Button3" type="Button" parent="abajo"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_qfkam")
+theme_override_styles/hover = SubResource("StyleBoxFlat_05bog")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_y6eit")
+
+[node name="Button4" type="Button" parent="abajo"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_qfkam")
+theme_override_styles/hover = SubResource("StyleBoxFlat_05bog")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_y6eit")
+
+[node name="Salir" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1093.0
+offset_top = 7.0
+offset_right = 1142.0
+offset_bottom = 53.0
+focus_mode = 0
+flat = true
+
+[connection signal="pressed" from="abajo/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="abajo/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="abajo/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="abajo/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]

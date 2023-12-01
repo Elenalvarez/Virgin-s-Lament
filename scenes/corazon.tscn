@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhiqkcr3fmev1"]
+
+[ext_resource type="Texture2D" uid="uid://bq43en3h1ntn3" path="res://assets/10x10cm CORAZON DE LA VIRGEN.png" id="1_6y3hu"]
+[ext_resource type="Script" path="res://scripts/notapiano.gd" id="2_7bpfr"]
+[ext_resource type="Texture2D" uid="uid://bhtk3ndkpkbn7" path="res://assets/exit_gold.png" id="3_e0ns4"]
+[ext_resource type="FontFile" uid="uid://bq6gtmqupxaxq" path="res://assets/fonts/Cinzel-VariableFont_wght.ttf" id="4_1s8i0"]
+
+[node name="NotaPiano" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -1815.0
+offset_top = -4273.0
+offset_right = -1775.0
+offset_bottom = -4233.0
+scale = Vector2(108.515, 221.227)
+color = Color(0.117647, 0.117647, 0.117647, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 346.0
+offset_top = 69.0
+offset_right = 794.0
+offset_bottom = 517.0
+texture = ExtResource("1_6y3hu")
+expand_mode = 1
+script = ExtResource("2_7bpfr")
+
+[node name="ExitGold" type="Sprite2D" parent="."]
+position = Vector2(1121, 32)
+scale = Vector2(2.52666, 2.52666)
+texture = ExtResource("3_e0ns4")
+
+[node name="Salir" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1096.0
+offset_top = 6.0
+offset_right = 1145.0
+offset_bottom = 52.0
+scale = Vector2(0.970929, 1.01274)
+focus_mode = 0
+flat = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 334.0
+offset_top = 512.0
+offset_right = 801.0
+offset_bottom = 566.0
+theme_override_fonts/font = ExtResource("4_1s8i0")
+theme_override_font_sizes/font_size = 37
+text = "The heart of the Virgin"
+
+[connection signal="gui_input" from="TextureRect" to="TextureRect" method="_on_gui_input"]
+[connection signal="pressed" from="Salir" to="TextureRect" method="_on_salir_pressed"]

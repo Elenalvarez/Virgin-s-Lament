@@ -46,8 +46,10 @@ func _on_button_2_pressed():
 		await get_tree().create_timer(0.5).timeout
 		get_node(".").visible = false
 		GLOBAL.piano = true
-		AudioServer.set_bus_mute(1, false)
+		AudioServer.set_bus_volume_db(1, 0)
 		get_parent().get_node("NotaPiano").visible = true
+		get_parent().get_node("Pedrolo").playing = true
+		get_parent().get_node("CHIMENEA CON ESCALONES").translate(Vector3(0, 0.18, 0))
 		queue_free()
 	else:
 		contador=0 

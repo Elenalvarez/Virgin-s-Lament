@@ -28,26 +28,15 @@ texture = ExtResource("3_fsaxi")
 
 [node name="Peso" type="Label" parent="."]
 visible = false
+layout_mode = 0
 offset_left = 470.0
 offset_top = 478.0
 offset_right = 680.0
 offset_bottom = 561.0
-text = "42"
+text = "05.74"
 label_settings = SubResource("LabelSettings_0tlax")
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Salida" type="Button" parent="."]
-offset_left = 1035.0
-offset_top = 5.0
-offset_right = 1165.0
-offset_bottom = 92.0
-flat = true
-
-[node name="ExitGold" type="Sprite2D" parent="Salida"]
-position = Vector2(61, 44)
-scale = Vector2(3.44444, 3.44444)
-texture = ExtResource("7_3mviw")
 
 [node name="10x10CmCorazonDeLaVirgen" type="Sprite2D" parent="."]
 visible = false
@@ -55,4 +44,27 @@ position = Vector2(578, 217)
 scale = Vector2(0.201947, 0.201947)
 texture = ExtResource("8_okde6")
 
+[node name="Salida" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1047.0
+offset_top = 5.0
+offset_right = 1146.0
+offset_bottom = 92.0
+focus_mode = 0
+flat = true
+
+[node name="ExitGold" type="Sprite2D" parent="Salida"]
+position = Vector2(61, 44)
+scale = Vector2(3.44444, 3.44444)
+texture = ExtResource("7_3mviw")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 651.0
+offset_top = 564.0
+offset_right = 687.0
+offset_bottom = 599.0
+flat = true
+
 [connection signal="pressed" from="Salida" to="." method="_on_salida_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
