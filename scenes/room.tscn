@@ -1,6 +1,6 @@
-[gd_scene load_steps=224 format=3 uid="uid://bo56ausmm078f"]
+[gd_scene load_steps=225 format=3 uid="uid://bo56ausmm078f"]
 
-[ext_resource type="PackedScene" uid="uid://qp83kfxevoyc" path="res://scenes/player.tscn" id="1_wkk4h"]
+[ext_resource type="PackedScene" uid="uid://qp83kfxevoyc" path="res://scenes/Player.tscn" id="1_wkk4h"]
 [ext_resource type="Texture2D" uid="uid://ctxe3ch88jtpo" path="res://assets/textures/TEXTURAS FOTOREALISTAS/double_brick_floor_diff_4k.png" id="2_7ufki"]
 [ext_resource type="PackedScene" uid="uid://bb5ge7khi7uot" path="res://scenes/menu.tscn" id="2_qn77n"]
 [ext_resource type="Texture2D" uid="uid://ysi1ng4ocicb" path="res://assets/textures/NUEVAS TEXTURAS/Tiles110_1K-JPG/Tiles110_1K-JPG_Color.jpg" id="3_3whyy"]
@@ -69,6 +69,7 @@
 [ext_resource type="Texture2D" uid="uid://cyvlewuoojdvq" path="res://assets/imagenes/FUEGUITOO 1.png" id="59_0mgbi"]
 [ext_resource type="Texture2D" uid="uid://cq30iwuwx87mg" path="res://assets/imagenes/FUEGUITO 2.png" id="60_frhtc"]
 [ext_resource type="Texture2D" uid="uid://brusp56si0b1p" path="res://assets/imagenes/FUEGUITOO 3.png" id="61_2mvly"]
+[ext_resource type="PackedScene" uid="uid://bbdp25oi820dv" path="res://scenes/telescope.tscn" id="66_oojyy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xa0vh"]
 transparency = 1
@@ -572,15 +573,6 @@ subsurf_scatter_enabled = true
 subsurf_scatter_skin_mode = true
 subsurf_scatter_texture = ExtResource("47_lurs0")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ab4sa"]
-albedo_texture = ExtResource("29_1govt")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8c3ts"]
-albedo_texture = ExtResource("26_gom3s")
-normal_enabled = true
-normal_texture = ExtResource("27_wk25n")
-uv1_scale = Vector3(2, 2, 2)
-
 [sub_resource type="PlaneMesh" id="PlaneMesh_1hsuj"]
 size = Vector2(0.4, 0.08)
 
@@ -596,6 +588,15 @@ transparency = 2
 alpha_scissor_threshold = 0.707
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("41_w77f3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ab4sa"]
+albedo_texture = ExtResource("29_1govt")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8c3ts"]
+albedo_texture = ExtResource("26_gom3s")
+normal_enabled = true
+normal_texture = ExtResource("27_wk25n")
+uv1_scale = Vector3(2, 2, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ncp8j"]
 albedo_color = Color(0.192157, 0.192157, 0.192157, 1)
@@ -1459,6 +1460,18 @@ mesh = SubResource("PlaneMesh_7beli")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_o2qw5")
 
+[node name="Pescao" type="MeshInstance3D" parent="Muebles"]
+transform = Transform3D(-2.76292e-07, 0, 1.61648, 0, 1, 0, -1.26416, 0, -3.53293e-07, 2.83481, 0.760093, -1.12908)
+mesh = SubResource("PlaneMesh_1hsuj")
+skeleton = NodePath("../mesa comedor/tabla de cortar")
+surface_material_override/0 = SubResource("StandardMaterial3D_x1ctp")
+
+[node name="microscopio" type="MeshInstance3D" parent="Muebles"]
+transform = Transform3D(-0.973643, 0.228079, -8.51186e-08, 8.74228e-08, 1.91069e-15, -1, -0.228079, -0.973643, -1.99393e-08, 0.244438, 1.1769, 4.05174)
+mesh = SubResource("PlaneMesh_qvode")
+skeleton = NodePath("../BUREAU MICROSCOP")
+surface_material_override/0 = SubResource("StandardMaterial3D_n162h")
+
 [node name="Luces" type="Node3D" parent="."]
 
 [node name="OSCURIDAD" type="OmniLight3D" parent="Luces"]
@@ -1572,12 +1585,6 @@ use_collision = true
 size = Vector3(0.3, 0.25, 0.6)
 script = ExtResource("32_e5qnr")
 
-[node name="Pescao" type="MeshInstance3D" parent="Objetos interactuables"]
-transform = Transform3D(-2.76292e-07, 0, 1.61648, 0, 1, 0, -1.26416, 0, -3.53293e-07, 2.83481, 0.760093, -1.12908)
-mesh = SubResource("PlaneMesh_1hsuj")
-skeleton = NodePath("../../Muebles/mesa comedor/tabla de cortar")
-surface_material_override/0 = SubResource("StandardMaterial3D_x1ctp")
-
 [node name="Switch" type="CSGBox3D" parent="Objetos interactuables"]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 3.79529, 1.20267, 2.429)
 use_collision = true
@@ -1588,28 +1595,15 @@ script = ExtResource("32_e5qnr")
 transform = Transform3D(0.992388, 0.123151, 0, -0.123151, 0.992388, 0, 0, 0, 1, -0.00545025, 0, 0)
 size = Vector3(0.01, 0.055, 0.055)
 
-[node name="microscopio" type="MeshInstance3D" parent="Objetos interactuables"]
-transform = Transform3D(-0.973643, 0.228079, -8.51186e-08, 8.74228e-08, 1.91069e-15, -1, -0.228079, -0.973643, -1.99393e-08, 0.244438, 1.1769, 4.05174)
-mesh = SubResource("PlaneMesh_qvode")
-skeleton = NodePath("../../Muebles/BUREAU MICROSCOP")
-surface_material_override/0 = SubResource("StandardMaterial3D_n162h")
+[node name="Telescope" type="CSGBox3D" parent="Objetos interactuables"]
+transform = Transform3D(0.882562, 0, -0.0145358, 0, 1, 0, 0.470196, 0, 0.0272838, 1.31842, 0.749842, -2.10122)
+visible = false
+use_collision = true
+size = Vector3(0.824121, 1.11502, 1)
+script = ExtResource("32_e5qnr")
 
 [node name="Player" parent="." instance=ExtResource("1_wkk4h")]
 transform = Transform3D(-0.097635, 0, -0.995222, 0, 1, 0, 0.995222, 0, -0.097635, -0.4741, 1.00287, 5.32757)
-
-[node name="Control" type="Control" parent="."]
-process_mode = 3
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="Menu" parent="Control" instance=ExtResource("2_qn77n")]
-visible = false
-layout_mode = 1
 
 [node name="CHIMENEA CON ESCALONES" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.711479, 0)
@@ -1793,6 +1787,20 @@ autoplay = "default"
 frame_progress = 0.807807
 speed_scale = 0.5
 
+[node name="Control" type="Control" parent="."]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Menu" parent="Control" instance=ExtResource("2_qn77n")]
+visible = false
+layout_mode = 1
+
 [node name="CajonSupDcha" parent="." instance=ExtResource("38_kuygc")]
 visible = false
 
@@ -1800,6 +1808,9 @@ visible = false
 visible = false
 
 [node name="Bascula" parent="." instance=ExtResource("51_6pubp")]
+visible = false
+
+[node name="Telescope" parent="." instance=ExtResource("66_oojyy")]
 visible = false
 
 [node name="SI RE NA" type="AudioStreamPlayer3D" parent="."]

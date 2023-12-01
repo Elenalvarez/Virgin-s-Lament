@@ -5,7 +5,7 @@ const DEACCEL = 30
 
 const SPEED = 5.0
 const SPRINT_MULT = 2
-const JUMP_VELOCITY = 4.5
+const JUMP_VELOCITY = 2
 
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
