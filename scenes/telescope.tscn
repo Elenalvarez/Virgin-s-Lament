@@ -36,6 +36,7 @@ scale = Vector2(2.52666, 2.52666)
 texture = ExtResource("3_ols1a")
 
 [node name="Salir" type="Button" parent="."]
+layout_mode = 0
 offset_left = 1096.0
 offset_top = 6.0
 offset_right = 1145.0

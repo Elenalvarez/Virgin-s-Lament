@@ -58,5 +58,6 @@ func solucion():
 
 
 func _on_salir_pressed():
+	await get_tree().create_timer(0.5).timeout
 	get_node(".").visible = false
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)	
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

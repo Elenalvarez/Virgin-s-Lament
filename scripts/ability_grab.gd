@@ -32,12 +32,24 @@ func _process(delta):
 			var cajon = get_parent().get_parent().get_parent().get_parent().get_node("CajonSupDcha")
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			cajon.visible = true
-			
-		#PULSAR EL PIANO
-		if prompt.text == "Piano" and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and !GLOBAL.piano:
-			var piano = get_parent().get_parent().get_parent().get_parent().get_node("Piano")
+		
+		#PULSAR CAJÓN SUP IZQ
+		if prompt.text == "Top left drawer" and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and !GLOBAL.cajonSupIz:
+			var cajon = get_parent().get_parent().get_parent().get_parent().get_node("CajonSupIz")
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-			piano.visible = true
+			cajon.visible = true
+		
+		#PULSAR EL PIANO
+		if prompt.text == "Piano" and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+			if !GLOBAL.piano:
+				var piano = get_parent().get_parent().get_parent().get_parent().get_node("Piano")
+				AudioServer.set_bus_mute(1, true)
+				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+				piano.visible = true
+			else:
+				var nota = get_parent().get_parent().get_parent().get_parent().get_node("NotaPiano")
+				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+				nota.visible = true
 		
 		#PULSAR BASCULA
 		if prompt.text == "Weighing machine" and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and !GLOBAL.bascula:

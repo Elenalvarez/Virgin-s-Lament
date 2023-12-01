@@ -6,5 +6,6 @@ func _on_gui_input(event):
 
 
 func _on_salir_pressed():
+	await get_tree().create_timer(0.5).timeout
 	get_parent().get_node(".").visible = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)	
