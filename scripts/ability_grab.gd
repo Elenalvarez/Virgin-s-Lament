@@ -28,10 +28,15 @@ func _process(delta):
 			cambiar_switch()
 		
 		#PULSAR CAJÓN SUP DCHA
-		if prompt.text == "Top right drawer" and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and !GLOBAL.cajonSupDcha:
-			var cajon = get_parent().get_parent().get_parent().get_parent().get_node("CajonSupDcha")
-			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-			cajon.visible = true
+		if prompt.text == "Top right drawer" and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+			if !GLOBAL.cajonSupDcha:
+				var cajon = get_parent().get_parent().get_parent().get_parent().get_node("CajonSupDcha")
+				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+				cajon.visible = true
+			else:
+				var periodico = get_parent().get_parent().get_parent().get_parent().get_node("Periodico")
+				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+				periodico.visible = true
 		
 		#PULSAR CAJÓN SUP IZQ
 		if prompt.text == "Top left drawer" and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and !GLOBAL.cajonSupIz:
@@ -39,11 +44,17 @@ func _process(delta):
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			cajon.visible = true
 		
+		#PULSAR CAJÓN INF IZQ
+		if prompt.text == "Bottom left drawer" and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and !GLOBAL.cajonInfIz:
+			var cajon = get_parent().get_parent().get_parent().get_parent().get_node("CajonInfIz")
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			cajon.visible = true
+		
 		#PULSAR EL PIANO
 		if prompt.text == "Piano" and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 			if !GLOBAL.piano:
 				var piano = get_parent().get_parent().get_parent().get_parent().get_node("Piano")
-				AudioServer.set_bus_mute(1, true)
+				AudioServer.set_bus_volume_db(1, -8)
 				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 				piano.visible = true
 			else:
@@ -62,6 +73,14 @@ func _process(delta):
 			var telescopio = get_parent().get_parent().get_parent().get_parent().get_node("Telescope")
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			telescopio.visible = true
+			
+		#CHIMENEA FINAAAAL
+		if prompt.text == "Fire" and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and GLOBAL.carta:
+			AudioServer.set_bus_mute(1, true)
+			AudioServer.set_bus_mute(3, true)
+			var video= get_parent().get_parent().get_parent().get_parent().get_node("Final")
+			video.visible = true
+			video.play()
 	
 	if Input.is_key_pressed(KEY_E):
 		if can_use:

@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfwg2hfack0l1"]
+
+[ext_resource type="Texture2D" uid="uid://dht45eajujjhk" path="res://assets/imagenes/carta.jpg" id="1_1wui3"]
+[ext_resource type="Script" path="res://scripts/notapiano.gd" id="2_1x7o7"]
+[ext_resource type="Texture2D" uid="uid://bhtk3ndkpkbn7" path="res://assets/exit_gold.png" id="3_dyp21"]
+
+[node name="NotaPiano" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -1815.0
+offset_top = -4273.0
+offset_right = -1775.0
+offset_bottom = -4233.0
+scale = Vector2(108.515, 221.227)
+color = Color(0.117647, 0.117647, 0.117647, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 131.0
+offset_top = -15.0
+offset_right = 1035.0
+offset_bottom = 1264.0
+texture = ExtResource("1_1wui3")
+expand_mode = 1
+script = ExtResource("2_1x7o7")
+
+[node name="ExitGold" type="Sprite2D" parent="."]
+position = Vector2(1121, 32)
+scale = Vector2(2.52666, 2.52666)
+texture = ExtResource("3_dyp21")
+
+[node name="Salir" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1096.0
+offset_top = 6.0
+offset_right = 1145.0
+offset_bottom = 52.0
+scale = Vector2(0.970929, 1.01274)
+focus_mode = 0
+flat = true
+
+[connection signal="gui_input" from="TextureRect" to="TextureRect" method="_on_gui_input"]
+[connection signal="pressed" from="Salir" to="TextureRect" method="_on_salir_pressed"]

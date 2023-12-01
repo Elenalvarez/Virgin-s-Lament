@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bb5ge7khi7uot"]
+[gd_scene load_steps=6 format=3 uid="uid://bb5ge7khi7uot"]
 
 [ext_resource type="FontFile" uid="uid://bq6gtmqupxaxq" path="res://assets/fonts/Cinzel-VariableFont_wght.ttf" id="1_kiqn8"]
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_yd0b7"]
-[ext_resource type="PackedScene" uid="uid://bo7ndpca54jai" path="res://scenes/options_menu.tscn" id="3_th6h0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a3kg8"]
 bg_color = Color(0.184314, 0.184314, 0.184314, 0.392157)
@@ -91,24 +90,6 @@ text = "Play"
 icon_alignment = 1
 expand_icon = true
 
-[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/margin_left = 200
-theme_override_constants/margin_right = 200
-
-[node name="OptionsButton" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer3"]
-layout_mode = 2
-focus_mode = 0
-theme_override_fonts/font = ExtResource("1_kiqn8")
-theme_override_font_sizes/font_size = 75
-theme_override_styles/normal = SubResource("StyleBoxFlat_a3kg8")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ltn0y")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_87owc")
-text = "Options"
-icon_alignment = 1
-expand_icon = true
-
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -127,11 +108,5 @@ text = "Exit"
 icon_alignment = 1
 expand_icon = true
 
-[node name="OptionMenu" parent="." instance=ExtResource("3_th6h0")]
-visible = false
-layout_mode = 1
-metadata/_edit_use_anchors_ = true
-
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/PlayButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer3/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2/ExitButton" to="." method="_on_exit_button_pressed"]

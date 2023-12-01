@@ -51,9 +51,12 @@ func _on_button_4_pressed():
 
 func solucion():
 	if con1== 3 and con2== 1 and con3== 2 and con4== 0:
+		get_parent().get_node("Pedrolo").playing = true
+		get_parent().get_node("CHIMENEA CON ESCALONES").translate(Vector3(0, 0.18, 0))
+		await get_tree().create_timer(0.5).timeout
 		get_node(".").visible = false
 		GLOBAL.cajonSupDcha = true
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		get_parent().get_node("Periodico").visible = true
 		queue_free()
 
 

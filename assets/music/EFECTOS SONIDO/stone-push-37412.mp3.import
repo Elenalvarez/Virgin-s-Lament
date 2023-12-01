@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b365yd4ksxd2f"
+path="res://.godot/imported/stone-push-37412.mp3-3e4dcb2ecca9e01c2904fd9493862a89.mp3str"
+
+[deps]
+
+source_file="res://assets/music/EFECTOS SONIDO/stone-push-37412.mp3"
+dest_files=["res://.godot/imported/stone-push-37412.mp3-3e4dcb2ecca9e01c2904fd9493862a89.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

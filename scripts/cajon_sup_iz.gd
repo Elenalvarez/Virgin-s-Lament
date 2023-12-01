@@ -46,9 +46,13 @@ func _on_button_4_pressed():
 
 func solucion():
 	if a== 1 and b== 6 and c== 2 and d== 1:
-		get_node(".").visible = false
+		get_parent().get_node("Pedrolo").playing = true
+		get_parent().get_node("CHIMENEA CON ESCALONES").translate(Vector3(0, 0.18, 0))
+		await get_tree().create_timer(0.5).timeout
 		GLOBAL.cajonSupIz = true
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		GLOBAL.corazon = true
+		get_node(".").visible = false
+		get_parent().get_node("Corazon").visible = true
 		queue_free()
 
 

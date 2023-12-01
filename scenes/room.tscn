@@ -1,4 +1,4 @@
-[gd_scene load_steps=227 format=3 uid="uid://bo56ausmm078f"]
+[gd_scene load_steps=236 format=3 uid="uid://bo56ausmm078f"]
 
 [ext_resource type="PackedScene" uid="uid://qp83kfxevoyc" path="res://scenes/Player.tscn" id="1_wkk4h"]
 [ext_resource type="Texture2D" uid="uid://ctxe3ch88jtpo" path="res://assets/textures/TEXTURAS FOTOREALISTAS/double_brick_floor_diff_4k.png" id="2_7ufki"]
@@ -46,6 +46,7 @@
 [ext_resource type="Texture2D" uid="uid://cs7hwvgv5gebn" path="res://assets/textures/NUEVAS TEXTURAS/Metal041A_1K-JPG/Metal041A_1K-JPG_Metalness.jpg" id="30_7wegv"]
 [ext_resource type="Script" path="res://scripts/interactuable.gd" id="32_e5qnr"]
 [ext_resource type="Texture2D" uid="uid://cnm3u4pth3w" path="res://assets/textures/NUEVAS TEXTURAS/Wood020_1K-JPG/Wood020_1K-JPG_NormalGL.jpg" id="33_7weev"]
+[ext_resource type="Texture2D" uid="uid://dy1irjyc0lie6" path="res://assets/imagenes/CAJON ALTO.JPG" id="35_s6atj"]
 [ext_resource type="Texture2D" uid="uid://d1xxkdojrr2f4" path="res://assets/imagenes/TIFFANY.png" id="36_8vm81"]
 [ext_resource type="Texture2D" uid="uid://dq4qhcebvubq8" path="res://assets/imagenes/LIBROS 1.png" id="36_bbfnf"]
 [ext_resource type="Texture2D" uid="uid://h1jk75dy3yi6" path="res://assets/imagenes/LIBROS 6.png" id="37_2sw8s"]
@@ -70,8 +71,14 @@
 [ext_resource type="Texture2D" uid="uid://cq30iwuwx87mg" path="res://assets/imagenes/FUEGUITO 2.png" id="60_frhtc"]
 [ext_resource type="Texture2D" uid="uid://brusp56si0b1p" path="res://assets/imagenes/FUEGUITOO 3.png" id="61_2mvly"]
 [ext_resource type="PackedScene" uid="uid://bethtp0t2eyin" path="res://scenes/cajon_sup_iz.tscn" id="64_slfmn"]
+[ext_resource type="PackedScene" uid="uid://cyr3j2skr08of" path="res://scenes/cajon_inf_iz.tscn" id="65_1bker"]
 [ext_resource type="PackedScene" uid="uid://bbdp25oi820dv" path="res://scenes/telescope.tscn" id="66_oojyy"]
 [ext_resource type="PackedScene" uid="uid://dnqa11ow7p48b" path="res://scenes/nota_piano.tscn" id="67_mud2a"]
+[ext_resource type="PackedScene" uid="uid://bktftw5d7nglb" path="res://scenes/periodico.tscn" id="70_fyc6q"]
+[ext_resource type="PackedScene" uid="uid://bhiqkcr3fmev1" path="res://scenes/corazon.tscn" id="71_h0bmv"]
+[ext_resource type="AudioStream" uid="uid://b365yd4ksxd2f" path="res://assets/music/EFECTOS SONIDO/stone-push-37412.mp3" id="72_nnsk3"]
+[ext_resource type="PackedScene" uid="uid://dfwg2hfack0l1" path="res://scenes/carta.tscn" id="72_pqrgc"]
+[ext_resource type="VideoStream" path="res://assets/video/CREDITOS.ogv" id="77_arpuv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xa0vh"]
 transparency = 1
@@ -451,6 +458,12 @@ albedo_texture = ExtResource("27_1jd3a")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ftv3h"]
 size = Vector2(0.3, 0.25)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_icy74"]
+albedo_texture = ExtResource("35_s6atj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t6vdk"]
+albedo_texture = ExtResource("35_s6atj")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_12qtb"]
 albedo_texture = ExtResource("28_bdcat")
@@ -1215,12 +1228,12 @@ surface_material_override/0 = SubResource("StandardMaterial3D_3p0i7")
 [node name="TEXTURA CAJON 2" type="MeshInstance3D" parent="Muebles/BUREAU MICROSCOP"]
 transform = Transform3D(1.06581e-14, 1, 2.68659e-16, 8.74228e-08, 3.55271e-15, -1, -1, 7.10543e-15, -8.74228e-08, 0.255981, -0.157783, 0.629431)
 mesh = SubResource("PlaneMesh_ftv3h")
-surface_material_override/0 = SubResource("StandardMaterial3D_12qtb")
+surface_material_override/0 = SubResource("StandardMaterial3D_icy74")
 
 [node name="TEXTURA CAJON 3" type="MeshInstance3D" parent="Muebles/BUREAU MICROSCOP"]
 transform = Transform3D(1.06581e-14, 1, 2.68659e-16, 8.74228e-08, 3.55271e-15, -1, -1, 7.10543e-15, -8.74228e-08, 0.255981, -0.430321, 0.629987)
 mesh = SubResource("PlaneMesh_ftv3h")
-surface_material_override/0 = SubResource("StandardMaterial3D_12qtb")
+surface_material_override/0 = SubResource("StandardMaterial3D_t6vdk")
 
 [node name="TEXTURA CAJON 4" type="MeshInstance3D" parent="Muebles/BUREAU MICROSCOP"]
 transform = Transform3D(1.06581e-14, 1, 2.68659e-16, 8.74228e-08, 3.55271e-15, -1, -1, 7.10543e-15, -8.74228e-08, 0.255981, -0.429607, -0.650037)
@@ -1610,6 +1623,13 @@ transform = Transform3D(-0.097635, 0, -0.995222, 0, 1, 0, 0.995222, 0, -0.097635
 [node name="CHIMENEA CON ESCALONES" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.711479, 0)
 
+[node name="Fire" type="CSGBox3D" parent="CHIMENEA CON ESCALONES"]
+transform = Transform3D(0.700087, 0, -0.714057, 0, 1, 0, 0.714057, 0, 0.700087, -1.65848, 1.48633, -1.52257)
+visible = false
+use_collision = true
+size = Vector3(0.002, 0.281857, 0.803616)
+script = ExtResource("32_e5qnr")
+
 [node name="CHIMENEA" type="OmniLight3D" parent="CHIMENEA CON ESCALONES"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.55928, 1.52828, -1.46042)
 light_color = Color(1, 0.482353, 0.239216, 1)
@@ -1809,6 +1829,9 @@ visible = false
 [node name="CajonSupIz" parent="." instance=ExtResource("64_slfmn")]
 visible = false
 
+[node name="CajonInfIz" parent="." instance=ExtResource("65_1bker")]
+visible = false
+
 [node name="Piano" parent="." instance=ExtResource("39_7f7sf")]
 visible = false
 
@@ -1821,11 +1844,27 @@ visible = false
 [node name="NotaPiano" parent="." instance=ExtResource("67_mud2a")]
 visible = false
 
+[node name="Periodico" parent="." instance=ExtResource("70_fyc6q")]
+visible = false
+
+[node name="Corazon" parent="." instance=ExtResource("71_h0bmv")]
+visible = false
+
+[node name="Carta" parent="." instance=ExtResource("72_pqrgc")]
+visible = false
+
+[node name="Pedrolo" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.425705, 0.161072, -0.424575)
+stream = ExtResource("72_nnsk3")
+volume_db = -4.0
+bus = &"escalones"
+
 [node name="SI RE NA" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.93627, 0, -5.51275)
 stream = ExtResource("53_c8i7e")
 volume_db = -40.43
 autoplay = true
+bus = &"efectos"
 doppler_tracking = 2
 
 [node name="STORMY" type="AudioStreamPlayer3D" parent="."]
@@ -1833,6 +1872,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27217, 1.40707, -3.43843)
 stream = ExtResource("54_711hu")
 volume_db = -23.226
 autoplay = true
+bus = &"efectos"
 
 [node name="FUEGORL" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.79923, 0.645322, -1.67535)
@@ -1840,6 +1880,7 @@ stream = ExtResource("55_furo5")
 volume_db = -26.667
 pitch_scale = 0.98
 autoplay = true
+bus = &"efectos"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("56_27bj2")
@@ -1864,3 +1905,17 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.2687
 use_collision = true
 size = Vector3(0.002, 38.1934, 10.6794)
 material = SubResource("StandardMaterial3D_08j1l")
+
+[node name="Final" type="VideoStreamPlayer" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -384.0
+offset_top = -220.0
+offset_right = 384.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("77_arpuv")
+volume_db = -6.0
