@@ -1,4 +1,4 @@
-[gd_scene load_steps=225 format=3 uid="uid://bo56ausmm078f"]
+[gd_scene load_steps=227 format=3 uid="uid://bo56ausmm078f"]
 
 [ext_resource type="PackedScene" uid="uid://qp83kfxevoyc" path="res://scenes/Player.tscn" id="1_wkk4h"]
 [ext_resource type="Texture2D" uid="uid://ctxe3ch88jtpo" path="res://assets/textures/TEXTURAS FOTOREALISTAS/double_brick_floor_diff_4k.png" id="2_7ufki"]
@@ -69,7 +69,9 @@
 [ext_resource type="Texture2D" uid="uid://cyvlewuoojdvq" path="res://assets/imagenes/FUEGUITOO 1.png" id="59_0mgbi"]
 [ext_resource type="Texture2D" uid="uid://cq30iwuwx87mg" path="res://assets/imagenes/FUEGUITO 2.png" id="60_frhtc"]
 [ext_resource type="Texture2D" uid="uid://brusp56si0b1p" path="res://assets/imagenes/FUEGUITOO 3.png" id="61_2mvly"]
+[ext_resource type="PackedScene" uid="uid://bethtp0t2eyin" path="res://scenes/cajon_sup_iz.tscn" id="64_slfmn"]
 [ext_resource type="PackedScene" uid="uid://bbdp25oi820dv" path="res://scenes/telescope.tscn" id="66_oojyy"]
+[ext_resource type="PackedScene" uid="uid://dnqa11ow7p48b" path="res://scenes/nota_piano.tscn" id="67_mud2a"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xa0vh"]
 transparency = 1
@@ -1804,6 +1806,9 @@ layout_mode = 1
 [node name="CajonSupDcha" parent="." instance=ExtResource("38_kuygc")]
 visible = false
 
+[node name="CajonSupIz" parent="." instance=ExtResource("64_slfmn")]
+visible = false
+
 [node name="Piano" parent="." instance=ExtResource("39_7f7sf")]
 visible = false
 
@@ -1811,6 +1816,9 @@ visible = false
 visible = false
 
 [node name="Telescope" parent="." instance=ExtResource("66_oojyy")]
+visible = false
+
+[node name="NotaPiano" parent="." instance=ExtResource("67_mud2a")]
 visible = false
 
 [node name="SI RE NA" type="AudioStreamPlayer3D" parent="."]
@@ -1837,6 +1845,7 @@ autoplay = true
 stream = ExtResource("56_27bj2")
 volume_db = -8.945
 autoplay = true
+bus = &"musica"
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.51694, 0.913183, 2.68212)

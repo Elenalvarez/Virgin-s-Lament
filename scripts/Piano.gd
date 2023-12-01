@@ -43,9 +43,11 @@ func _on_button_3_pressed():
 func _on_button_2_pressed():
 	$Button2/AudioStreamPlayer2D.play()
 	if last_button=="E" and contador==4:
+		await get_tree().create_timer(0.5).timeout
 		get_node(".").visible = false
 		GLOBAL.piano = true
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		AudioServer.set_bus_mute(1, false)
+		get_parent().get_node("NotaPiano").visible = true
 		queue_free()
 	else:
 		contador=0 
